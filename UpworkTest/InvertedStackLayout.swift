@@ -40,6 +40,7 @@ class InvertedStackLayout: UICollectionViewLayout {
         let row = indexPath.item/itemsPerRow
         let rowPosition = indexPath.item - row*itemsPerRow
         
+        
         var xPosition = CGFloat(rowPosition) * cellSize
         if row%2 != 0 {
             xPosition = contentSize.width - xPosition - cellSize
