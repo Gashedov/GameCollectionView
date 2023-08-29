@@ -34,7 +34,7 @@ extension ViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        let count = 20
+        let count = 22
         let itemsPerRow = Int(collectionView.frame.width/layout.cellSize)
         if count%itemsPerRow != 0 {
             return count + (itemsPerRow - count%itemsPerRow)
@@ -71,7 +71,7 @@ extension ViewController: UICollectionViewDataSource {
         
         if indexPath.item == 0 {
             cell.configureLine(lineTipe: .begin)
-        } else if indexPath.item == gameCollectionView.numberOfItems(inSection: 0) - 1 {
+        } else if indexPath.item == gameCollectionView.numberOfItems(inSection: indexPath.section) - 1 {
             if isInBackwardRow {
                 cell.configureLine(lineTipe: .begin)
             } else {
@@ -96,11 +96,27 @@ extension ViewController: UICollectionViewDataSource {
     }
     
     private func configureCorners(cell: GameCollectionViewCell, at indexPath: IndexPath) {
+        let numberOfItemsInSection = gameCollectionView.numberOfItems(inSection: indexPath.section)
+        let isLastInFirstRow = indexPath.item == layout.itemsPerRow-1
+        let isFirstInLastRow = indexPath.item == numberOfItemsInSection - layout.itemsPerRow
+        let isInBackwardRow = (indexPath.item/layout.itemsPerRow)%2 != 0
+        
         if indexPath.item == 0 {
-            cell.configureLine(lineTipe: .begin)
-        } else if indexPath.item == gameCollectionView.numberOfItems(inSection: 0) - 1 {
-            
-        } else {
+            cell.roundCorners(corners: .topLeft)
+        } else if indexPath.item == numberOfItemsInSection - 1 {
+            if isInBackwardRow {
+                cell.roundCorners(corners: .bottomLeft)
+            } else {
+                cell.roundCorners(corners: .bottomRight)
+            }
+        } else if isLastInFirstRow {
+                cell.roundCorners(corners: .topRight)
+        } else if isFirstInLastRow {
+            if isInBackwardRow {
+                cell.roundCorners(corners: .bottomRight)
+            } else {
+                cell.roundCorners(corners: .bottomLeft)
+            }
             
         }
     }

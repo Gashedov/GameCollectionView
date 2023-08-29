@@ -18,9 +18,14 @@ class GameCollectionViewCell: BaseCollectionViewCell {
     private let startLineView = UIView()
     private let endLineView = UIView()
     
+    private var containerLayer: CALayer?
+    
     override func prepareForReuse() {
         startLineView.removeFromSuperview()
         endLineView.removeFromSuperview()
+        
+        backgroundColor = .gray
+        containerLayer?.mask = nil
     }
     
     override func setupConstraints() {
@@ -60,17 +65,21 @@ class GameCollectionViewCell: BaseCollectionViewCell {
         }
     }
     
-    func layoutHorizontalLines() {
+    func roundCorners(corners: UIRectCorner) {
+        roundCorners(corners: corners, radius: 12)
+    }
+    
+    private func layoutHorizontalLines() {
         layoutBeginLine()
         layoutEndLine()
     }
     
-    func layoutLeftDownLines() {
+    private func layoutLeftDownLines() {
         layoutBeginLine()
         layoutBottomLine()
     }
     
-    func layoutRightDownLines() {
+    private func layoutRightDownLines() {
         startLineView.snp.makeConstraints {
             $0.trailing.equalToSuperview()
             $0.leading.equalTo(snp.centerX)
@@ -80,7 +89,7 @@ class GameCollectionViewCell: BaseCollectionViewCell {
         layoutBottomLine()
     }
     
-    func layoutTopLeftLines() {
+    private func layoutTopLeftLines() {
         layoutTopLine()
         endLineView.snp.makeConstraints {
             $0.leading.equalToSuperview()
@@ -90,12 +99,12 @@ class GameCollectionViewCell: BaseCollectionViewCell {
         }
     }
     
-    func layoutTopRightLines() {
+    private func layoutTopRightLines() {
         layoutTopLine()
         layoutEndLine()
     }
     
-    func layoutBeginLine() {
+    private func layoutBeginLine() {
         startLineView.snp.makeConstraints {
             $0.leading.equalToSuperview()
             $0.trailing.equalTo(snp.centerX)
@@ -104,7 +113,7 @@ class GameCollectionViewCell: BaseCollectionViewCell {
         }
     }
     
-    func layoutEndLine() {
+    private func layoutEndLine() {
         endLineView.snp.makeConstraints {
             $0.trailing.equalToSuperview()
             $0.leading.equalTo(snp.centerX)
@@ -113,7 +122,7 @@ class GameCollectionViewCell: BaseCollectionViewCell {
         }
     }
     
-    func layoutTopLine() {
+    private func layoutTopLine() {
         startLineView.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.bottom.equalTo(snp.centerY)
@@ -122,12 +131,33 @@ class GameCollectionViewCell: BaseCollectionViewCell {
         }
     }
     
-    func layoutBottomLine() {
+    private func layoutBottomLine() {
         endLineView.snp.makeConstraints {
             $0.bottom.equalToSuperview()
             $0.top.equalTo(snp.centerY)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(4)
         }
+    }
+}
+extension GameCollectionViewCell {
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(
+            roundedRect: bounds,
+            byRoundingCorners: corners,
+            cornerRadii: CGSize(width: radius, height: radius)
+        )
+        
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = path.cgPath
+        let containerLayer = self.containerLayer ?? CALayer()
+        
+        containerLayer.backgroundColor = layer.backgroundColor
+        containerLayer.frame = bounds
+        containerLayer.mask = maskLayer
+        layer.backgroundColor = UIColor.clear.cgColor
+        layer.insertSublayer(containerLayer, at: 0)
+        
+        self.containerLayer = containerLayer
     }
 }

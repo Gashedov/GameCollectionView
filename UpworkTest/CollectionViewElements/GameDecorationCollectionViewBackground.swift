@@ -3,7 +3,7 @@ import UIKit
 class RoundedCollectionBackgroundView: BaseCollectionReusableView {
     private var insetView: UIView = {
         let view = UIView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .black
         view.layer.cornerRadius = 12
         view.clipsToBounds = true
         return view
@@ -28,7 +28,7 @@ class RoundedCollectionBackgroundView: BaseCollectionReusableView {
 class RoundedCollectionBorderView: BaseCollectionReusableView {
     private var insetView: UIView = {
         let view = UIView()
-        view.backgroundColor = .black
+        view.backgroundColor = .lightGray
         view.layer.cornerRadius = 12
         view.clipsToBounds = true
         return view
