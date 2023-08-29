@@ -1,9 +1,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    private let titleBackgroundImageView = UIImageView()
-    private let titleLabel = UILabel()
-    
     private let layout = InvertedStackLayout()
     private lazy var gameCollectionView: UICollectionView = {
         return UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -12,32 +9,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(titleBackgroundImageView)
-        titleBackgroundImageView.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.top.equalToSuperview().inset(20)
-            $0.width.equalToSuperview().multipliedBy(0.7)
-            $0.height.equalTo(40)
-        }
-        
-        titleBackgroundImageView.addSubview(titleLabel)
-        titleLabel.snp.makeConstraints {
-            $0.center.equalToSuperview()
-        }
-        
         view.addSubview(gameCollectionView)
         gameCollectionView.snp.makeConstraints {
-            $0.top.equalTo(titleBackgroundImageView.snp.bottom).offset(20)
-            $0.leading.trailing.equalToSuperview().inset(10)
+            $0.horizontalEdges.top.equalToSuperview().inset(10)
             $0.bottom.equalToSuperview().inset(20)
         }
         
         gameCollectionView.register(GameCollectionViewCell.self)
+        gameCollectionView.registerHeader(GameCollectionViewHeader.self)
         gameCollectionView.dataSource = self
         gameCollectionView.delegate = self
-        
-        titleBackgroundImageView.backgroundColor = .orange
-        titleLabel.text = "Title"
     }
 }
 
@@ -45,11 +26,26 @@ extension ViewController: UICollectionViewDelegate {
 }
 
 extension ViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 5
+    }
+    
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return 100
+        return 20
+    }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        viewForSupplementaryElementOfKind kind: String,
+        at indexPath: IndexPath
+    ) -> UICollectionReusableView {
+        let header: GameCollectionViewHeader = collectionView.dequeueReusableHeaderView(for: indexPath)
+        header.configure(with: "Title number \(indexPath.item)", and: .lightGray)
+        //supplementaryView.backgroundColor = UIColor.blueColor()
+        return header
     }
     
     func collectionView(
