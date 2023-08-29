@@ -11,8 +11,8 @@ class ViewController: UIViewController {
         
         view.addSubview(gameCollectionView)
         gameCollectionView.snp.makeConstraints {
-            $0.horizontalEdges.top.equalToSuperview().inset(10)
-            $0.bottom.equalToSuperview().inset(20)
+            $0.top.bottom.equalToSuperview()
+            $0.leading.trailing.equalTo(view.safeAreaLayoutGuide)
         }
         
         gameCollectionView.register(GameCollectionViewCell.self)
@@ -34,7 +34,12 @@ extension ViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return 20
+        let count = 20
+        let itemsPerRow = Int(collectionView.frame.width/layout.cellSize)
+        if count%itemsPerRow != 0 {
+            return count + (itemsPerRow - count%itemsPerRow)
+        }
+        return count
     }
     
     func collectionView(
@@ -43,7 +48,7 @@ extension ViewController: UICollectionViewDataSource {
         at indexPath: IndexPath
     ) -> UICollectionReusableView {
         let header: GameCollectionViewHeader = collectionView.dequeueReusableHeaderView(for: indexPath)
-        header.configure(with: "Title number \(indexPath.item)", and: .lightGray)
+        header.configure(with: "Title number \(indexPath.section)", and: .lightGray)
         //supplementaryView.backgroundColor = UIColor.blueColor()
         return header
     }
@@ -55,6 +60,7 @@ extension ViewController: UICollectionViewDataSource {
         let cell: GameCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.configure(with: indexPath.item)
         configureLines(cell: cell, at: indexPath)
+        configureCorners(cell: cell, at: indexPath)
         return cell
     }
     
@@ -86,6 +92,16 @@ extension ViewController: UICollectionViewDataSource {
         }
         else {
             cell.configureLine(lineTipe: .horizantal)
+        }
+    }
+    
+    private func configureCorners(cell: GameCollectionViewCell, at indexPath: IndexPath) {
+        if indexPath.item == 0 {
+            cell.configureLine(lineTipe: .begin)
+        } else if indexPath.item == gameCollectionView.numberOfItems(inSection: 0) - 1 {
+            
+        } else {
+            
         }
     }
 }

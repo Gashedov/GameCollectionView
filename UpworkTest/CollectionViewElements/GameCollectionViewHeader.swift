@@ -40,7 +40,9 @@ class GameCollectionViewHeader: BaseCollectionReusableView {
         backgroundColor = .clear
         
         containerView.backgroundColor = .gray
+        containerView.layer.cornerRadius = 10
         frontContainerView.backgroundColor = .lightGray
+        frontContainerView.layer.cornerRadius = 10
         titleLabel.text = "Title"
         badgeImageView.image = .checkmark
     }
