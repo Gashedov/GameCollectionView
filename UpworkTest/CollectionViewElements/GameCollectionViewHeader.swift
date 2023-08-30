@@ -44,8 +44,11 @@ class GameCollectionViewHeader: BaseCollectionReusableView {
         containerView.layer.cornerRadius = 10
         frontContainerView.layer.cornerRadius = 10
         
-        frontContainerView.backgroundColor = .yellow
-        containerView.backgroundColor = .systemYellow
+        titleLabel.textColor = UIColor(hex: "#b96b30")
+        titleLabel.font = .systemFont(ofSize: 18, weight: .semibold)
+        
+        frontContainerView.backgroundColor = UIColor(hex: "#f4df65")
+        containerView.backgroundColor = UIColor(hex: "#e1ae52")
         badgeImageView.image = UIImage(named: "unit_icon")
     }
 }

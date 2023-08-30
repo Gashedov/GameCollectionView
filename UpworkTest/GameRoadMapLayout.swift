@@ -3,20 +3,23 @@ import UIKit
 
 class DecorationCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
     var color: UIColor? = .white
+    var borderWidth: CGFloat = 4
     
     override func copy(with zone: NSZone? = nil) -> Any {
         let copy = super.copy(with: zone) as? DecorationCollectionViewLayoutAttributes
         copy?.color = self.color
+        copy?.borderWidth = self.borderWidth
         return copy as Any
     }
 }
 
 class GameRoadMapLayout: UICollectionViewLayout {
     var cellSize: CGFloat = 80
-    var sectionsInsets = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
+    var sectionsInsets = UIEdgeInsets(top: 0, left: 6, bottom: 0, right: 6)
     var sectionsOffset: CGFloat = 100
     var headerInsets = UIEdgeInsets(top: 0, left: 20, bottom: 20, right: 20)
     var headerSize = CGSize(width: 460, height: 50)
+    var sectionBorderWidth: CGFloat = 4
     
     var sectionsColors: [(borderColor: UIColor?, shadeColor: UIColor?)] = []
     
@@ -219,12 +222,13 @@ class GameRoadMapLayout: UICollectionViewLayout {
             
             atts.zIndex = 10
             let attributesFrame = CGRect(
-                origin: .init(x: decorationX-4, y: decorationY-4),
-                size: .init(width: width+8, height: height+8)
+                origin: .init(x: decorationX-sectionBorderWidth, y: decorationY-sectionBorderWidth),
+                size: .init(width: width+sectionBorderWidth*2, height: height+sectionBorderWidth*2)
             )
             atts.frame = attributesFrame
             if indexPath.section < sectionsColors.count {
                 atts.color = sectionsColors[indexPath.section].borderColor
+                atts.borderWidth = sectionBorderWidth
             }
             return atts
         }
@@ -239,7 +243,7 @@ class GameRoadMapLayout: UICollectionViewLayout {
             return true
         }
 
-        return true
+        return false
     }
 }
 

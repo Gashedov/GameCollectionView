@@ -103,7 +103,13 @@ extension ViewController: UICollectionViewDataSource {
         let config = viewModel.units[indexPath.section].config
         let model = viewModel.units[indexPath.section].activities[indexPath.item]
         
-        cell.configure(badgeImageName: model.imageName, primaryColorHEX: config.backgroundColor)
+        var cellType: GameCollectionViewCell.CellType
+        if model.type == "filler" {
+            cellType = .filler(model.imageName)
+        } else {
+            cellType = .activity(model.imageName)
+        }
+        cell.configure(cellType: cellType, primaryColorHEX: config.backgroundColor)
         configureLines(cell: cell, at: indexPath)
         
         if indexPath.item == 0 {
