@@ -90,7 +90,7 @@ class GameCollectionViewCell: BaseCollectionViewCell {
             }
         }
         badgeImageView.image = image
-        let alpha = Double.random(in: 0.7...1.0)
+        let alpha = Double.random(in: 0.3...0.9)
         backgroundColor = UIColor(hex: primaryColorHEX, alpha: alpha)
     }
     

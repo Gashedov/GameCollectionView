@@ -76,6 +76,7 @@ class GameRoadMapLayout: UICollectionViewLayout {
         super.init()
         register(RoundedCollectionBackgroundView.self, forDecorationViewOfKind: RoundedCollectionBackgroundView.reuseId)
         register(RoundedCollectionBorderView.self, forDecorationViewOfKind: RoundedCollectionBorderView.reuseId)
+        register(RoundedCollectionBottomView.self, forDecorationViewOfKind: RoundedCollectionBottomView.reuseId)
     }
     
     required init?(coder: NSCoder) {
@@ -122,6 +123,15 @@ class GameRoadMapLayout: UICollectionViewLayout {
             
             if let decorationAtts = layoutAttributesForDecorationView(
                 ofKind: RoundedCollectionBorderView.reuseId,
+                at: IndexPath(item: 0, section: section)
+            ) {
+                if rect.intersects(decorationAtts.frame) {
+                    layoutAttrs.append(decorationAtts)
+                }
+            }
+            
+            if let decorationAtts = layoutAttributesForDecorationView(
+                ofKind: RoundedCollectionBottomView.reuseId,
                 at: IndexPath(item: 0, section: section)
             ) {
                 if rect.intersects(decorationAtts.frame) {
@@ -206,11 +216,22 @@ class GameRoadMapLayout: UICollectionViewLayout {
                 with: indexPath
             )
             
-            atts.zIndex = -2
+            atts.zIndex = -1
             atts.frame = attributesFrame
             if indexPath.section < sectionsColors.count {
                 atts.color = sectionsColors[indexPath.section].shadeColor
             }
+            return atts
+        }
+        
+        if elementKind == RoundedCollectionBottomView.reuseId {
+            let atts = DecorationCollectionViewLayoutAttributes(
+                forDecorationViewOfKind: RoundedCollectionBottomView.reuseId,
+                with: indexPath
+            )
+            
+            atts.zIndex = -2
+            atts.frame = attributesFrame
             return atts
         }
         

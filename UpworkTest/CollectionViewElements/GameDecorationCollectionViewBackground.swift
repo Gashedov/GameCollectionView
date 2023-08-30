@@ -1,5 +1,31 @@
 import UIKit
 
+class RoundedCollectionBottomView: BaseCollectionReusableView {
+    private var insetView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .brown
+        view.layer.cornerRadius = 12
+        view.clipsToBounds = true
+        return view
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .clear
+        addSubview(insetView)
+        insetView.snp.makeConstraints {
+            $0.trailing.equalToSuperview().offset(4)
+            $0.leading.equalToSuperview().offset(-4)
+            $0.bottom.equalToSuperview().offset(16)
+            $0.top.equalToSuperview().offset(8)
+        }
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 class RoundedCollectionBackgroundView: BaseCollectionReusableView {
     private var insetView: UIView = {
         let view = UIView()
@@ -14,9 +40,7 @@ class RoundedCollectionBackgroundView: BaseCollectionReusableView {
         backgroundColor = .clear
         addSubview(insetView)
         insetView.snp.makeConstraints {
-            $0.top.leading.equalToSuperview().offset(-4)
-            $0.trailing.equalToSuperview().offset(4)
-            $0.bottom.equalToSuperview().offset(16)
+            $0.edges.equalToSuperview()
         }
     }
 

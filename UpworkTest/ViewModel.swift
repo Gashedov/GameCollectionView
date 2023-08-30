@@ -49,12 +49,18 @@ class ViewModel {
                     randoms: unitDTO.config.randoms
                 )
             let activities = unitDTO.activities.map { activityDTO in
-                UnitActivityModel(
+                var imageName = "\(activityDTO.type)_token_\(activityDTO.status)"
+                if activityDTO.type == "convo" {
+                    imageName = "ai_token_\(activityDTO.status)"
+                } else if activityDTO.type == "eset" {
+                    imageName = "exercise_token_\(activityDTO.status)"
+                }
+                return UnitActivityModel(
                     title: activityDTO.title,
                     description: activityDTO.desc,
                     type: activityDTO.type,
                     status: activityDTO.status,
-                    imageName: "\(activityDTO.type)_token_\(activityDTO.status)"
+                    imageName: imageName
                 )
             }
             return UnitModel(
