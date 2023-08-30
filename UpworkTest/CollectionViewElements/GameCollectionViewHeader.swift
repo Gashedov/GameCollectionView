@@ -6,16 +6,17 @@ class GameCollectionViewHeader: BaseCollectionReusableView {
     private let frontContainerView = UIView()
     private let badgeImageView = UIImageView()
     
-    func configure(with text: String, and color: UIColor) {
+    func configure(
+        with text: String
+    ) {
         titleLabel.text = text
-        //frontContainerView.backgroundColor = color
     }
     
     override func setupConstraints() {
         addSubview(containerView)
         containerView.snp.makeConstraints {
             $0.verticalEdges.equalToSuperview()
-            $0.horizontalEdges.equalToSuperview().inset(40)
+            $0.horizontalEdges.equalToSuperview()
         }
         
         containerView.addSubview(frontContainerView)
@@ -27,7 +28,8 @@ class GameCollectionViewHeader: BaseCollectionReusableView {
         containerView.addSubview(badgeImageView)
         badgeImageView.snp.makeConstraints {
             $0.verticalEdges.equalToSuperview()
-            $0.leading.equalToSuperview()
+            $0.centerX.equalTo(snp.leading)
+            $0.width.equalTo(badgeImageView.snp.height)
         }
         
         frontContainerView.addSubview(titleLabel)
@@ -39,11 +41,11 @@ class GameCollectionViewHeader: BaseCollectionReusableView {
     override func setupUI() {
         backgroundColor = .clear
         
-        containerView.backgroundColor = .gray
         containerView.layer.cornerRadius = 10
-        frontContainerView.backgroundColor = .lightGray
         frontContainerView.layer.cornerRadius = 10
-        titleLabel.text = "Title"
-        badgeImageView.image = .checkmark
+        
+        frontContainerView.backgroundColor = .yellow
+        containerView.backgroundColor = .systemYellow
+        badgeImageView.image = UIImage(named: "unit_icon")
     }
 }

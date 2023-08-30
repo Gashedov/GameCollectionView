@@ -9,49 +9,66 @@ enum LineType {
     case topRight
     case begin
     case end
+    case up
 }
 
 class GameCollectionViewCell: BaseCollectionViewCell {
-    private let titleLabel = UILabel()
-    private let imageView = UIImageView()
+    private let badgeImageView = UIImageView()
+    private let startLineImageView = UIImageView()
     
     private let startLineView = UIView()
     private let endLineView = UIView()
     
-    private var containerLayer: CALayer?
-    
     override func prepareForReuse() {
         startLineView.removeFromSuperview()
+        startLineView.snp.removeConstraints()
         endLineView.removeFromSuperview()
+        endLineView.snp.removeConstraints()
         
-        backgroundColor = .gray
-        containerLayer?.mask = nil
+        startLineImageView.isHidden = true
+        
+        backgroundColor = .clear
     }
     
     override func setupConstraints() {
-        addSubview(titleLabel)
-        titleLabel.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+        addSubview(badgeImageView)
+        badgeImageView.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(20)
+        }
+        
+        addSubview(startLineImageView)
+        startLineImageView.snp.makeConstraints {
+            $0.trailing.top.bottom.equalToSuperview()
+            $0.width.equalTo(12)
         }
     }
     
     override func setupUI() {
-        backgroundColor = .gray
-        titleLabel.numberOfLines = 0
-        titleLabel.textAlignment = .center
+        backgroundColor = .green
         
-        startLineView.backgroundColor = .red
-        endLineView.backgroundColor = .red
+        startLineView.backgroundColor = .white
+        endLineView.backgroundColor = .white
     
+        startLineImageView.image = UIImage(named: "start_line")
+        startLineImageView.isHidden = true
     }
     
-    func configure(with number: Int) {
-        titleLabel.text = String(number)
+    func configure(
+        badgeImageName: String,
+        primaryColorHEX: String
+    ) {
+        badgeImageView.image = UIImage(named: badgeImageName)
+        let alpha = Double.random(in: 0.7...1.0)
+        backgroundColor = UIColor(hex: primaryColorHEX, alpha: alpha)
+    }
+    
+    func configureStartImage(visible: Bool) {
+        startLineImageView.isHidden = !visible
     }
     
     func configureLine(lineTipe: LineType) {
-        insertSubview(startLineView, belowSubview: titleLabel)
-        insertSubview(endLineView, belowSubview: titleLabel)
+        insertSubview(startLineView, belowSubview: badgeImageView)
+        insertSubview(endLineView, belowSubview: badgeImageView)
         
         switch lineTipe {
         case .horizantal: layoutHorizontalLines()
@@ -61,12 +78,8 @@ class GameCollectionViewCell: BaseCollectionViewCell {
         case .topRight: layoutTopRightLines()
         case .begin: layoutEndLine()
         case .end: layoutBeginLine()
-            
+        case .up: layoutTopLine()
         }
-    }
-    
-    func roundCorners(corners: UIRectCorner) {
-        roundCorners(corners: corners, radius: 12)
     }
     
     private func layoutHorizontalLines() {
@@ -138,26 +151,5 @@ class GameCollectionViewCell: BaseCollectionViewCell {
             $0.centerX.equalToSuperview()
             $0.width.equalTo(4)
         }
-    }
-}
-extension GameCollectionViewCell {
-    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
-        let path = UIBezierPath(
-            roundedRect: bounds,
-            byRoundingCorners: corners,
-            cornerRadii: CGSize(width: radius, height: radius)
-        )
-        
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = path.cgPath
-        let containerLayer = self.containerLayer ?? CALayer()
-        
-        containerLayer.backgroundColor = layer.backgroundColor
-        containerLayer.frame = bounds
-        containerLayer.mask = maskLayer
-        layer.backgroundColor = UIColor.clear.cgColor
-        layer.insertSublayer(containerLayer, at: 0)
-        
-        self.containerLayer = containerLayer
     }
 }

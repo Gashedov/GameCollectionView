@@ -1,15 +1,34 @@
 import Foundation
 import UIKit
 
-class InvertedStackLayout: UICollectionViewLayout {
-    var cellSize: CGFloat = 100
+class DecorationCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
+    var color: UIColor? = .white
+    
+    override func copy(with zone: NSZone? = nil) -> Any {
+        let copy = super.copy(with: zone) as? DecorationCollectionViewLayoutAttributes
+        copy?.color = self.color
+        return copy as Any
+    }
+}
+
+class GameRoadMapLayout: UICollectionViewLayout {
+    var cellSize: CGFloat = 80
     var sectionsInsets = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
-    var sectionsOffset: CGFloat = 20
+    var sectionsOffset: CGFloat = 100
     var headerInsets = UIEdgeInsets(top: 0, left: 20, bottom: 20, right: 20)
-    var headerSize = CGSize(width: 320, height: 50)
+    var headerSize = CGSize(width: 460, height: 50)
+    
+    var sectionsColors: [(borderColor: UIColor?, shadeColor: UIColor?)] = []
+    
+    private var sectionHeights: [Int: CGFloat] = [:]
     
     var itemsPerRow: Int {
         Int(collectionViewContentSize.width/cellSize)
+    }
+    
+    override func invalidateLayout() {
+        super.invalidateLayout()
+        sectionHeights = [:]
     }
     
     override var collectionViewContentSize: CGSize {
@@ -20,6 +39,11 @@ class InvertedStackLayout: UICollectionViewLayout {
 
             if let collectionView = collectionView {
                 for section in 0..<collectionView.numberOfSections {
+                    if let cachedSectionHeight = sectionHeights[section] {
+                        height += cachedSectionHeight
+                        continue
+                    }
+                    
                     var sectionHeight: CGFloat = 0
                     sectionHeight += headerSize.height + headerInsets.top + headerInsets.bottom
                     
@@ -34,6 +58,7 @@ class InvertedStackLayout: UICollectionViewLayout {
                     sectionHeight += sectionsInsets.bottom + sectionsInsets.top
                     sectionHeight += sectionsOffset
                     
+                    sectionHeights[section] = sectionHeight
                     height += sectionHeight
                 }
             }
@@ -67,7 +92,9 @@ class InvertedStackLayout: UICollectionViewLayout {
                 ofKind: UICollectionView.elementKindSectionHeader,
                 at: IndexPath(item: 0, section: section)
             ) {
-                layoutAttrs.append(headerAttr)
+                if rect.intersects(headerAttr.frame) {
+                    layoutAttrs.append(headerAttr)
+                }
             }
             
             if let numberOfSectionItems = numberOfItemsInSection(section) {
@@ -171,24 +198,34 @@ class InvertedStackLayout: UICollectionViewLayout {
         )
         
         if elementKind == RoundedCollectionBackgroundView.reuseId {
-            let atts = UICollectionViewLayoutAttributes(
+            let atts = DecorationCollectionViewLayoutAttributes(
                 forDecorationViewOfKind: RoundedCollectionBackgroundView.reuseId,
                 with: indexPath
             )
             
             atts.zIndex = -2
             atts.frame = attributesFrame
+            if indexPath.section < sectionsColors.count {
+                atts.color = sectionsColors[indexPath.section].shadeColor
+            }
             return atts
         }
         
         if elementKind == RoundedCollectionBorderView.reuseId {
-            let atts = UICollectionViewLayoutAttributes(
+            let atts = DecorationCollectionViewLayoutAttributes(
                 forDecorationViewOfKind: RoundedCollectionBorderView.reuseId,
                 with: indexPath
             )
             
-            atts.zIndex = -1
+            atts.zIndex = 10
+            let attributesFrame = CGRect(
+                origin: .init(x: decorationX-4, y: decorationY-4),
+                size: .init(width: width+8, height: height+8)
+            )
             atts.frame = attributesFrame
+            if indexPath.section < sectionsColors.count {
+                atts.color = sectionsColors[indexPath.section].borderColor
+            }
             return atts
         }
         
@@ -202,11 +239,11 @@ class InvertedStackLayout: UICollectionViewLayout {
             return true
         }
 
-        return false
+        return true
     }
 }
 
-extension InvertedStackLayout {
+extension GameRoadMapLayout {
     private func yPositionForSection(_ section: Int) -> CGFloat {
         var yPosition: CGFloat = 0
         for index in 0..<section {
@@ -216,7 +253,7 @@ extension InvertedStackLayout {
     }
     
     private func numberOfItemsInSection(_ section: Int) -> Int? {
-        guard let collectionView = self.collectionView,
+        guard let collectionView = collectionView,
               let numSectionItems = collectionView.dataSource?.collectionView(
                 collectionView,
                 numberOfItemsInSection: section
@@ -225,6 +262,10 @@ extension InvertedStackLayout {
     }
     
     private func fullHeightOfSection(_ section: Int) -> CGFloat {
+        if let cachedHeight = sectionHeights[section] {
+            return cachedHeight
+        }
+        
         var height: CGFloat = 0
         if let headerAttr = layoutAttributesForSupplementaryView(
             ofKind: UICollectionView.elementKindSectionHeader,
@@ -243,6 +284,8 @@ extension InvertedStackLayout {
         
         height += sectionsInsets.bottom + sectionsInsets.top
         height += sectionsOffset
+        
+        sectionHeights[section] = height
         
         return height
     }

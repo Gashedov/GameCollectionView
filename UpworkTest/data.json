@@ -1,0 +1,2262 @@
+{
+  "type": "learningmap",
+  "data": {
+    "units": [
+      {
+        "id": "1",
+        "labelar": "الحروف",
+        "labelen": "Alphabets",
+        "desc": "Unit 1: You will learn about the shapes and sounds of the Arabic Alphabets.",
+        "content": null,
+        "config": {
+          "bgcolor": "#6db434",
+          "bordercolor": "#b0d182",
+          "shadecolor": "#fadf4a",
+          "randoms": [
+            "forest_1.png",
+            "forest_2.png",
+            "forest_3.png"
+          ]
+        },
+        "activities": [
+          {
+            "id": "2",
+            "title": "Short Vowels ",
+            "desc": "In this lesson, you will recognize the shapes of Arabic short vowels, and learn how to pronounce them correctly.",
+            "type": "lsn",
+            "stepid": "1",
+            "order": "0",
+            "status": "finished"
+          },
+          {
+            "id": "5",
+            "title": " Short Vowels ",
+            "desc": "This lesson focuses on the sounds that Arabic short vowels make. ",
+            "type": "eset",
+            "stepid": "4",
+            "order": "1",
+            "status": "finished"
+          },
+          {
+            "id": "3",
+            "title": "Long Vowels",
+            "desc": "In this lesson, you will recognize the letters that represent the Arabic long vowels, and figure out the sounds they produce.",
+            "type": "lsn",
+            "stepid": "2",
+            "order": "2",
+            "status": "finished"
+          },
+          {
+            "id": "6",
+            "title": "Long Vowels ",
+            "desc": "In this lessson, we focus on the sounds that Arabic long vowels make.\t",
+            "type": "eset",
+            "stepid": "5",
+            "order": "3",
+            "status": "finished"
+          },
+          {
+            "id": "4",
+            "title": "Consonants: The letters Alif and Baa\t",
+            "desc": "In this lesson, you will explore the Arabic consonants and their characteristics.",
+            "type": "lsn",
+            "stepid": "3",
+            "order": "4",
+            "status": "finished"
+          },
+          {
+            "id": "7",
+            "title": "Consonants: The letters Alif and Baa",
+            "desc": "In this lesson, the student will learn how to recognize the letters أ and ب in Arabic. ",
+            "type": "eset",
+            "stepid": "6",
+            "order": "5",
+            "status": "finished"
+          },
+          {
+            "id": "6",
+            "title": "Consonants: The letter Meem",
+            "desc": "This lesson focuses on the sound and the shape of the letter م in Arabic.\t",
+            "type": "lsn",
+            "stepid": "54",
+            "order": "6",
+            "status": "finished"
+          },
+          {
+            "id": "11",
+            "title": "Consonants: The letter Meem\t",
+            "desc": "This lesson focuses on the sound and the shape of the letter م in Arabic.",
+            "type": "eset",
+            "stepid": "10",
+            "order": "7",
+            "status": "finished"
+          },
+          {
+            "id": "24",
+            "title": "بينغو الحروف",
+            "desc": "تعلّم أشكال وأصوات الحروف",
+            "config": "{\"filter\":\"أ,ب,م,و,ي\"}",
+            "type": "game",
+            "stepid": "117",
+            "order": "8",
+            "status": "finished"
+          },
+          {
+            "id": "7",
+            "title": "Consonants: The letter Kaaf\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ك in Arabic.\t",
+            "type": "lsn",
+            "stepid": "70",
+            "order": "9",
+            "status": "inactive"
+          },
+          {
+            "id": "15",
+            "title": "Consonants: The letter Kaaf\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ك in Arabic.\t",
+            "type": "eset",
+            "stepid": "53",
+            "order": "10",
+            "status": "inactive"
+          },
+          {
+            "id": "8",
+            "title": "Consonants: The letter Laam",
+            "desc": "This lesson focuses on the sound and the shape of the letter ل in Arabic.\t",
+            "type": "lsn",
+            "stepid": "71",
+            "order": "11",
+            "status": "inactive"
+          },
+          {
+            "id": "14",
+            "title": " Consonants: The letter Laam\t",
+            "desc": "This lesson focuses on the sound and the shape of the letter ل in Arabic.\t",
+            "type": "eset",
+            "stepid": "13",
+            "order": "12",
+            "status": "inactive"
+          },
+          {
+            "id": "10",
+            "title": "Consonants: The letter Daal",
+            "desc": "In this lesson, the student will learn how to recognize the letters د in Arabic.\t",
+            "type": "lsn",
+            "stepid": "73",
+            "order": "13",
+            "status": "inactive"
+          },
+          {
+            "id": "9",
+            "title": " Consonants: The letter Daal",
+            "desc": "In this lesson, the student will learn how to recognize the letter د in Arabic.",
+            "type": "eset",
+            "stepid": "8",
+            "order": "14",
+            "status": "inactive"
+          },
+          {
+            "id": "13",
+            "title": "Consonants: The letter Faa\t",
+            "desc": "This lesson is about the sound and shape of the letter ف in Arabic.\t",
+            "type": "lsn",
+            "stepid": "76",
+            "order": "15",
+            "status": "inactive"
+          },
+          {
+            "id": "13",
+            "title": "Consonants: The letter Faa",
+            "desc": "This lesson is about the sound and shape of the letter ف in Arabic.\t",
+            "type": "eset",
+            "stepid": "52",
+            "order": "16",
+            "status": "inactive"
+          },
+          {
+            "id": "11",
+            "title": "Consonants: The letter Waw",
+            "desc": "In this lesson, the student will learn how to recognize the letters و in Arabic.\t",
+            "type": "lsn",
+            "stepid": "74",
+            "order": "17",
+            "status": "inactive"
+          },
+          {
+            "id": "12",
+            "title": " Consonants: The letter Waw\t",
+            "desc": "In this lesson, the student will learn how to recognize the letters و in Arabic.\t",
+            "type": "eset",
+            "stepid": "11",
+            "order": "18",
+            "status": "inactive"
+          },
+          {
+            "id": "12",
+            "title": "Consonants: The letter Noon",
+            "desc": "In this lesson, the student will learn how to recognize the letter ن in Arabic.\t",
+            "type": "lsn",
+            "stepid": "75",
+            "order": "19",
+            "status": "inactive"
+          },
+          {
+            "id": "10",
+            "title": "Consonants: The letter Noon",
+            "desc": "In this lesson, the student will learn how to recognize the letter ن in Arabic.\t",
+            "type": "eset",
+            "stepid": "9",
+            "order": "20",
+            "status": "inactive"
+          },
+          {
+            "id": "68",
+            "title": "Sukoon",
+            "desc": "In this lesson, we will discuss the definition of Sukoon in Arabic, and the sign that represents this state. ",
+            "type": "lsn",
+            "stepid": "118",
+            "order": "21",
+            "status": "inactive"
+          },
+          {
+            "id": "16",
+            "title": "Sukoon",
+            "desc": "In this lesson, we will discuss the definition of Sukoon in Arabic, and the sign that represents this state.\t",
+            "type": "eset",
+            "stepid": "119",
+            "order": "22",
+            "status": "inactive"
+          },
+          {
+            "id": "9",
+            "title": "Consonants: The letter Jeem",
+            "desc": "This lesson is about the sound and shape of the letter ج in Arabic.\t",
+            "type": "lsn",
+            "stepid": "72",
+            "order": "23",
+            "status": "inactive"
+          },
+          {
+            "id": "8",
+            "title": "Consonants: The letter Jeem",
+            "desc": "This lesson is about the sound and shape of the letter ج in Arabic. ",
+            "type": "eset",
+            "stepid": "7",
+            "order": "24",
+            "status": "inactive"
+          },
+          {
+            "id": "69",
+            "title": "Consonants: The letter Raa\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ر in Arabic.\t",
+            "type": "lsn",
+            "stepid": "121",
+            "order": "25",
+            "status": "inactive"
+          },
+          {
+            "id": "17",
+            "title": "Consonants: The letter Raa",
+            "desc": "In this lesson, the student will learn how to recognize the letter ر in Arabic.\t",
+            "type": "eset",
+            "stepid": "120",
+            "order": "26",
+            "status": "inactive"
+          },
+          {
+            "id": "70",
+            "title": "Consonants: The letter Seen\t",
+            "desc": "This lesson is about the sound and shape of the letter س in Arabic.\t",
+            "type": "lsn",
+            "stepid": "122",
+            "order": "27",
+            "status": "inactive"
+          },
+          {
+            "id": "18",
+            "title": "Consonants: The letter Seen\t",
+            "desc": "This lesson is about the sound and shape of the letter س in Arabic.\t",
+            "type": "eset",
+            "stepid": "123",
+            "order": "28",
+            "status": "inactive"
+          },
+          {
+            "id": "71",
+            "title": "Consonants: The letter Taa\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ت in Arabic.\t",
+            "type": "lsn",
+            "stepid": "125",
+            "order": "29",
+            "status": "inactive"
+          },
+          {
+            "id": "19",
+            "title": "Consonants: The letter Taa\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ت in Arabic.\t",
+            "type": "eset",
+            "stepid": "124",
+            "order": "30",
+            "status": "inactive"
+          },
+          {
+            "id": "72",
+            "title": "Consonants: The letter Yaa\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ي in Arabic.\t",
+            "type": "lsn",
+            "stepid": "127",
+            "order": "31",
+            "status": "inactive"
+          },
+          {
+            "id": "20",
+            "title": "Consonants: The letter Yaa\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ي in Arabic.\t",
+            "type": "eset",
+            "stepid": "126",
+            "order": "32",
+            "status": "inactive"
+          },
+          {
+            "id": "73",
+            "title": "Consonants: The letter Zay\t",
+            "desc": "This lesson focuses on the sound and the shape of the letter ز in Arabic.\t",
+            "type": "lsn",
+            "stepid": "129",
+            "order": "33",
+            "status": "inactive"
+          },
+          {
+            "id": "21",
+            "title": "Consonants: The letter Zay\t",
+            "desc": "This lesson focuses on the sound and the shape of the letter ز in Arabic.\t",
+            "type": "eset",
+            "stepid": "128",
+            "order": "34",
+            "status": "inactive"
+          },
+          {
+            "id": "74",
+            "title": "Consonants: The letter Sheen\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ش in Arabic.\t",
+            "type": "lsn",
+            "stepid": "130",
+            "order": "35",
+            "status": "inactive"
+          },
+          {
+            "id": "22",
+            "title": "Consonants: The letter Sheen\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ش in Arabic.\t",
+            "type": "eset",
+            "stepid": "131",
+            "order": "36",
+            "status": "inactive"
+          },
+          {
+            "id": "168",
+            "title": "Consonants: The letter Thaa\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ث in Arabic.\t",
+            "type": "lsn",
+            "stepid": "243",
+            "order": "37",
+            "status": "inactive"
+          },
+          {
+            "id": "25",
+            "title": "Consonants: The letter Thaa\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ث in Arabic.\t",
+            "type": "eset",
+            "stepid": "228",
+            "order": "38",
+            "status": "inactive"
+          },
+          {
+            "id": "75",
+            "title": "Tanween (Nunation)\t",
+            "desc": "In this lesson, we will discuss the definition of nunation in Arabic and its different types.\t",
+            "type": "lsn",
+            "stepid": "132",
+            "order": "39",
+            "status": "inactive"
+          },
+          {
+            "id": "23",
+            "title": "Tanween (Nunation)",
+            "desc": "In this lesson, we will discuss the definition of nunation in Arabic and its different types.",
+            "type": "eset",
+            "stepid": "133",
+            "order": "40",
+            "status": "inactive"
+          },
+          {
+            "id": "169",
+            "title": "Consonants: The letter Ghayn\t",
+            "desc": "This lesson focuses on the sound and the shape of the letter غ in Arabic.\t",
+            "type": "lsn",
+            "stepid": "233",
+            "order": "41",
+            "status": "inactive"
+          },
+          {
+            "id": "26",
+            "title": "Consonants: The letter Ghayn",
+            "desc": "This lesson focuses on the sound and the shape of the letter غ in Arabic.\t",
+            "type": "eset",
+            "stepid": "227",
+            "order": "42",
+            "status": "inactive"
+          },
+          {
+            "id": "170",
+            "title": "Consonants: The letter Haa\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter هـ in Arabic.\t",
+            "type": "lsn",
+            "stepid": "234",
+            "order": "43",
+            "status": "inactive"
+          },
+          {
+            "id": "27",
+            "title": "Consonants: The letter Haa\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter هـ in Arabic.\t",
+            "type": "eset",
+            "stepid": "229",
+            "order": "44",
+            "status": "inactive"
+          },
+          {
+            "id": "171",
+            "title": "Consonants: The letter Dhaal",
+            "desc": "In this lessson, we focus on the sound and the shape of the Arabic letter ذ.\t",
+            "type": "lsn",
+            "stepid": "232",
+            "order": "45",
+            "status": "inactive"
+          },
+          {
+            "id": "28",
+            "title": "Consonants: The letter Dhaal",
+            "desc": "In this lessson, we focus on the sound and the shape of the Arabic letter ذ.\t",
+            "type": "eset",
+            "stepid": "230",
+            "order": "46",
+            "status": "inactive"
+          },
+          {
+            "id": "172",
+            "title": "Consonants: The letter Ttaa\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ط in Arabic.\t",
+            "type": "lsn",
+            "stepid": "235",
+            "order": "47",
+            "status": "inactive"
+          },
+          {
+            "id": "29",
+            "title": "Consonants: The letter Ttaa\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ط in Arabic.\t",
+            "type": "eset",
+            "stepid": "236",
+            "order": "48",
+            "status": "inactive"
+          },
+          {
+            "id": "173",
+            "title": "Consonants: The letter 7aa\t",
+            "desc": "This lesson focuses on the sound and the shape of the letter ح in Arabic.\t",
+            "type": "lsn",
+            "stepid": "238",
+            "order": "49",
+            "status": "inactive"
+          },
+          {
+            "id": "30",
+            "title": "Consonants: The letter 7aa\t",
+            "desc": "This lesson focuses on the sound and the shape of the letter ح in Arabic.\t",
+            "type": "eset",
+            "stepid": "237",
+            "order": "50",
+            "status": "inactive"
+          },
+          {
+            "id": "174",
+            "title": "Consonants: The letter DHaa",
+            "desc": "In this lesson, the student will learn how to recognize the letter ظ in Arabic.\t",
+            "type": "lsn",
+            "stepid": "239",
+            "order": "51",
+            "status": "inactive"
+          },
+          {
+            "id": "31",
+            "title": "Consonants: The letter DHaa\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ظ in Arabic.\t",
+            "type": "eset",
+            "stepid": "240",
+            "order": "52",
+            "status": "inactive"
+          },
+          {
+            "id": "175",
+            "title": "Consonants: The letter Qaaf\t",
+            "desc": "This lesson is about the sound and shape of the letter ق in Arabic.\t",
+            "type": "lsn",
+            "stepid": "241",
+            "order": "53",
+            "status": "inactive"
+          },
+          {
+            "id": "32",
+            "title": "Consonants: The letter Qaaf",
+            "desc": "This lesson is about the sound and shape of the letter ق in Arabic.\t",
+            "type": "eset",
+            "stepid": "242",
+            "order": "54",
+            "status": "inactive"
+          },
+          {
+            "id": "176",
+            "title": " Shadda (Doubling a letter)\t",
+            "desc": "In this lesson, we will discuss the definition and the use of Shadda in Arabic.\t",
+            "type": "lsn",
+            "stepid": "244",
+            "order": "55",
+            "status": "inactive"
+          },
+          {
+            "id": "33",
+            "title": "Shadda (Doubling a letter)",
+            "desc": "In this lesson, we will discuss the definition and the use of Shadda in Arabic. \t",
+            "type": "eset",
+            "stepid": "245",
+            "order": "56",
+            "status": "inactive"
+          },
+          {
+            "id": "177",
+            "title": "Consonants: The letter Daad\t",
+            "desc": "This lesson is about the sound and shape of the letter ض in Arabic.\t",
+            "type": "lsn",
+            "stepid": "246",
+            "order": "57",
+            "status": "inactive"
+          },
+          {
+            "id": "34",
+            "title": "Consonants: The letter Daad\t",
+            "desc": "This lesson is about the sound and shape of the letter ض in Arabic.\t",
+            "type": "eset",
+            "stepid": "247",
+            "order": "58",
+            "status": "inactive"
+          },
+          {
+            "id": "178",
+            "title": "The Tied Taa (Taa Marboota)\t",
+            "desc": "In this lesson, we will discuss the function of the Tied Taa and how to write it.\t",
+            "type": "lsn",
+            "stepid": "248",
+            "order": "59",
+            "status": "inactive"
+          },
+          {
+            "id": "35",
+            "title": "The Tied Taa (Taa Marboota)",
+            "desc": "In this lesson, we will discuss the function of the Tied Taa and how to write it. ",
+            "type": "eset",
+            "stepid": "249",
+            "order": "60",
+            "status": "inactive"
+          },
+          {
+            "id": "179",
+            "title": "Consonants: The letter Ayn\t",
+            "desc": "This lesson is about the sound and shape of the letter ع in Arabic.\t",
+            "type": "lsn",
+            "stepid": "250",
+            "order": "61",
+            "status": "inactive"
+          },
+          {
+            "id": "36",
+            "title": "Consonants: The letter Ayn\t",
+            "desc": "This lesson is about the sound and shape of the letter ع in Arabic.\t",
+            "type": "eset",
+            "stepid": "251",
+            "order": "62",
+            "status": "inactive"
+          },
+          {
+            "id": "180",
+            "title": "Consonants: The letter Saad\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ص in Arabic.\t",
+            "type": "lsn",
+            "stepid": "252",
+            "order": "63",
+            "status": "inactive"
+          },
+          {
+            "id": "37",
+            "title": "Consonants: The letter Saad\t",
+            "desc": "In this lesson, the student will learn how to recognize the letter ص in Arabic.\t",
+            "type": "eset",
+            "stepid": "253",
+            "order": "64",
+            "status": "inactive"
+          },
+          {
+            "id": "181",
+            "title": "Consonants: The letter Khaa\t",
+            "desc": "This lesson is about the sound and shape of the letter خ in Arabic.\t",
+            "type": "lsn",
+            "stepid": "254",
+            "order": "65",
+            "status": "inactive"
+          },
+          {
+            "id": "38",
+            "title": "Consonants: The letter Khaa",
+            "desc": "This lesson is about the sound and shape of the letter خ in Arabic.\t",
+            "type": "eset",
+            "stepid": "255",
+            "order": "66",
+            "status": "inactive"
+          }
+        ],
+        "finished": false
+      },
+      {
+        "id": "2",
+        "labelar": "مفردات وعبارات أساسية",
+        "labelen": "Basic Vocabulary and Phrases",
+        "desc": "Unit 2: You will learn about basic vocabulary that you can use in everyday conversations.",
+        "content": null,
+        "config": {
+          "bgcolor": "#f6c55c",
+          "bordercolor": "#f8d38c",
+          "shadecolor": "#ffffff",
+          "randoms": [
+            "desert_1.png",
+            "desert_2.png",
+            "desert_3.png"
+          ]
+        },
+        "activities": [
+          {
+            "id": "128",
+            "title": "جَسَدي",
+            "desc": "كتاب للمبتدئين في القراءة من مجموعة العالم من حولي، كلمة واحدة في الصفحة، يتحدّث هذا الكتاب عن أعضاء الجسم. ",
+            "type": "book",
+            "stepid": "46",
+            "order": "0",
+            "status": "inactive"
+          },
+          {
+            "id": "129",
+            "title": "ثيابي",
+            "desc": "كتاب للمبتدئين في القراءة من مجموعة العالم من حولي، كلمة واحدة في الصفحة، يتحدّث هذا الكتاب عن الملابس. ",
+            "type": "book",
+            "stepid": "47",
+            "order": "1",
+            "status": "inactive"
+          },
+          {
+            "id": "130",
+            "title": "في الْمَطْعَمِ",
+            "desc": "كتاب للمبتدئين في القراءة من مجموعة العالم من حولي، كلمة واحدة في الصفحة، يتحدّث هذا الكتاب عن أشياء تجدها في المطعم. ",
+            "type": "book",
+            "stepid": "48",
+            "order": "2",
+            "status": "inactive"
+          },
+          {
+            "id": "20",
+            "title": "Greetings",
+            "desc": "In this lesson you learn common greetings in Arabic.",
+            "type": "lsn",
+            "stepid": "61",
+            "order": "3",
+            "status": "inactive"
+          },
+          {
+            "id": "21",
+            "title": "Numbers (0 - 10)",
+            "desc": "In this lesson you will learn the numbers up to ten in Arabic.",
+            "type": "lsn",
+            "stepid": "62",
+            "order": "4",
+            "status": "inactive"
+          },
+          {
+            "id": "22",
+            "title": "Common Objects",
+            "desc": "In this lesson you will learn the vocabulary for common objects.",
+            "type": "lsn",
+            "stepid": "63",
+            "order": "5",
+            "status": "inactive"
+          },
+          {
+            "id": "608",
+            "title": "الملابس",
+            "desc": "",
+            "type": "video",
+            "stepid": "42",
+            "order": "6",
+            "status": "inactive"
+          },
+          {
+            "id": "126",
+            "title": "في الْمَنْزِلِ",
+            "desc": "كتاب للمبتدئين في القراءة من مجموعة العالم من حولي، كلمة واحدة في الصفحة، يتحدّث هذا الكتاب عن أشياء تجدها في المنزل. ",
+            "type": "book",
+            "stepid": "50",
+            "order": "7",
+            "status": "inactive"
+          },
+          {
+            "id": "609",
+            "title": "الطعام",
+            "desc": "",
+            "type": "video",
+            "stepid": "44",
+            "order": "8",
+            "status": "inactive"
+          },
+          {
+            "id": "610",
+            "title": "الأحجام والأطوال",
+            "desc": "",
+            "type": "video",
+            "stepid": "45",
+            "order": "9",
+            "status": "inactive"
+          },
+          {
+            "id": "23",
+            "title": "Family Members",
+            "desc": "In this lesson you will learn the names of family members in Arabic.",
+            "type": "lsn",
+            "stepid": "64",
+            "order": "10",
+            "status": "inactive"
+          },
+          {
+            "id": "14",
+            "title": "Colors",
+            "desc": "In this lesson you will learn the basic colors names in Arabic.",
+            "type": "lsn",
+            "stepid": "56",
+            "order": "11",
+            "status": "inactive"
+          },
+          {
+            "id": "57",
+            "title": "علبة الألوان",
+            "desc": "قصّة من سلسلة تعلّم القراءة، تساعد الطفل على بناء ثقته بقدرته على القراءة، تتكرّر الكلمات البصريّة التالية فيها بكثرة: قلم، تلوين. كما يتعرّف فيها الطفل على أسماء الألوان المختلفة. ",
+            "type": "book",
+            "stepid": "115",
+            "order": "12",
+            "status": "inactive"
+          },
+          {
+            "id": "15",
+            "title": "متجر الملابس",
+            "desc": "تعلّم عن الملابس والألوان",
+            "config": "{\"filter\":\"\"}",
+            "type": "game",
+            "stepid": "39",
+            "order": "13",
+            "status": "inactive"
+          },
+          {
+            "id": "24",
+            "title": "Days of the week",
+            "desc": "In this lesson you will learn the names of the days of the week.",
+            "type": "lsn",
+            "stepid": "65",
+            "order": "14",
+            "status": "inactive"
+          },
+          {
+            "id": "25",
+            "title": "Basic Verbs - 1",
+            "desc": "In this lesson you will learn the words for common verbs in Arabic.",
+            "type": "lsn",
+            "stepid": "66",
+            "order": "15",
+            "status": "inactive"
+          },
+          {
+            "id": "26",
+            "title": "Basic Verbs - 2 ",
+            "desc": "In this lesson you will learn the words for common verbs in Arabic.",
+            "type": "lsn",
+            "stepid": "67",
+            "order": "16",
+            "status": "inactive"
+          },
+          {
+            "id": "27",
+            "title": "Directions",
+            "desc": "In this lesson you will learn the vocabulary for directions in Arabic.",
+            "type": "lsn",
+            "stepid": "68",
+            "order": "17",
+            "status": "inactive"
+          },
+          {
+            "id": "607",
+            "title": "الاتجاهات",
+            "desc": "",
+            "type": "video",
+            "stepid": "43",
+            "order": "18",
+            "status": "inactive"
+          },
+          {
+            "id": "16",
+            "title": "إلى أين أذهب؟",
+            "desc": "تعلّم الاتجاهات بطريقة ممتعة... ولا تتأخّر!",
+            "config": "{\"filter\":\"\"}",
+            "type": "game",
+            "stepid": "41",
+            "order": "19",
+            "status": "inactive"
+          },
+          {
+            "id": "28",
+            "title": "Places",
+            "desc": "In this lesson you will the vocabulary for common places in Arabic.",
+            "type": "lsn",
+            "stepid": "69",
+            "order": "20",
+            "status": "inactive"
+          }
+        ],
+        "finished": false
+      },
+      {
+        "id": "3",
+        "labelar": "قواعد أساسية",
+        "labelen": "Basic Grammar",
+        "desc": "Unit 3: You will learn basic grammar to use in everyday conversations.",
+        "content": null,
+        "config": {
+          "bgcolor": "#6cbef6",
+          "bordercolor": "#ffffff",
+          "shadecolor": "#ffffff",
+          "randoms": [
+            "lake_1.png",
+            "lake_2.png",
+            "lake_3.png"
+          ]
+        },
+        "activities": [
+          {
+            "id": "15",
+            "title": "Nouns (masculine & feminine)",
+            "desc": "In this lesson you will learn about masculine and feminine in nouns.",
+            "type": "lsn",
+            "stepid": "55",
+            "order": "0",
+            "status": "inactive"
+          },
+          {
+            "id": "16",
+            "title": "Nouns (singular & plural)",
+            "desc": "In this lesson you will learn about singular & plural in nouns.",
+            "type": "lsn",
+            "stepid": "57",
+            "order": "1",
+            "status": "inactive"
+          },
+          {
+            "id": "17",
+            "title": "Pronouns (masculine & feminine)",
+            "desc": "In this lesson you will learn about masculine and feminine in pronouns.",
+            "type": "lsn",
+            "stepid": "58",
+            "order": "2",
+            "status": "inactive"
+          },
+          {
+            "id": "18",
+            "title": "Pronouns (singular & plural)",
+            "desc": "In this lesson you will learn about singular & plural forms in pronouns.",
+            "type": "lsn",
+            "stepid": "59",
+            "order": "3",
+            "status": "inactive"
+          },
+          {
+            "id": "19",
+            "title": "Definite & Indefinite Articles",
+            "desc": "In this lesson you will learn understand the difference between \"the\" (definite) and \"a/an\" (indefinite) forms and how they are applied in Arabic.",
+            "type": "lsn",
+            "stepid": "60",
+            "order": "4",
+            "status": "inactive"
+          },
+          {
+            "id": "29",
+            "title": "Basic Sentence Structure - 1",
+            "desc": "In this lesson you will learn the Noun-Adjective structure of sentences in Arabic.",
+            "type": "lsn",
+            "stepid": "77",
+            "order": "5",
+            "status": "inactive"
+          },
+          {
+            "id": "30",
+            "title": "Basic Sentence Structure - 2",
+            "desc": "In this lesson you will learn the Verb-Subject-Object (VSO) structure of sentences in Arabic.",
+            "type": "lsn",
+            "stepid": "78",
+            "order": "6",
+            "status": "inactive"
+          },
+          {
+            "id": "31",
+            "title": "Verb Conjugation (Tenses)",
+            "desc": "In this lesson you will learn how to form the different tenses(past, present, future, imperative) for a verb in Arabic.",
+            "type": "lsn",
+            "stepid": "79",
+            "order": "7",
+            "status": "inactive"
+          },
+          {
+            "id": "32",
+            "title": "Verb Conjugation (Person)",
+            "desc": "In this lesson you learn how to form the 1st, 2nd and 3rd person for of verbs in Arabic.",
+            "type": "lsn",
+            "stepid": "80",
+            "order": "8",
+            "status": "inactive"
+          },
+          {
+            "id": "33",
+            "title": "Verb Conjugation (Count)",
+            "desc": "In this lesson you will learn how to form verbs for singular, dual and plural in Arabic.",
+            "type": "lsn",
+            "stepid": "81",
+            "order": "9",
+            "status": "inactive"
+          },
+          {
+            "id": "34",
+            "title": "Negation",
+            "desc": "In this lesson you will learn how to use negation particles and how to create negative sentences.",
+            "type": "lsn",
+            "stepid": "82",
+            "order": "10",
+            "status": "inactive"
+          },
+          {
+            "id": "35",
+            "title": "Questions",
+            "desc": "In this lesson you will learn question words, question formation, and different types of questions (yes/no questions, wh-questions).",
+            "type": "lsn",
+            "stepid": "83",
+            "order": "11",
+            "status": "inactive"
+          },
+          {
+            "id": "36",
+            "title": "Possession",
+            "desc": "In this lesson you will learn about possessive pronouns and how to express ownership or possession.",
+            "type": "lsn",
+            "stepid": "84",
+            "order": "12",
+            "status": "inactive"
+          },
+          {
+            "id": "37",
+            "title": "Prepositions",
+            "desc": "In this lesson you will learn how to use prepositions in Arabic to indicate relationships between different elements in a sentence, such as location, direction, manner and more.",
+            "type": "lsn",
+            "stepid": "85",
+            "order": "13",
+            "status": "inactive"
+          },
+          {
+            "id": "38",
+            "title": "Adjectives and Adverbs",
+            "desc": "In this lesson you will learn how to modify nouns (adjectives) and verbs/adjectives (adverbs) and their placement in sentences in Arabic.",
+            "type": "lsn",
+            "stepid": "86",
+            "order": "14",
+            "status": "inactive"
+          },
+          {
+            "id": "39",
+            "title": "Demonstratives",
+            "desc": "In this lesson you will learn demonstrative pronouns and adjectives for indicating proximity (\"this,\" \"that,\" \"these,\" \"those\") in Arabic.",
+            "type": "lsn",
+            "stepid": "94",
+            "order": "15",
+            "status": "inactive"
+          },
+          {
+            "id": "40",
+            "title": "Numbers and Counting",
+            "desc": "In this lesson you will learn how to use numbers, both cardinal and ordinal when forming sentences in Arabic.",
+            "type": "lsn",
+            "stepid": "87",
+            "order": "16",
+            "status": "inactive"
+          },
+          {
+            "id": "41",
+            "title": "Time & Dates",
+            "desc": "In this lesson you will learn how to express and use time and dates in your sentences in Arabic.",
+            "type": "lsn",
+            "stepid": "88",
+            "order": "17",
+            "status": "inactive"
+          },
+          {
+            "id": "42",
+            "title": "Basic Agreement",
+            "desc": "In this lesson you will learn how adjectives and verbs agree in gender and number with the nouns they modify in Arabic.",
+            "type": "lsn",
+            "stepid": "89",
+            "order": "18",
+            "status": "inactive"
+          },
+          {
+            "id": "43",
+            "title": "Dual Form",
+            "desc": "In this lesson you will learn how to use the dual form to indicate two of something, which is unique to Arabic.",
+            "type": "lsn",
+            "stepid": "90",
+            "order": "19",
+            "status": "inactive"
+          },
+          {
+            "id": "44",
+            "title": "Direct and Indirect Objects",
+            "desc": "In this lesson you will learn how to use and place direct and indirect objects in sentences in Arabic.",
+            "type": "lsn",
+            "stepid": "91",
+            "order": "20",
+            "status": "inactive"
+          },
+          {
+            "id": "45",
+            "title": "Conjunctions",
+            "desc": "In this lesson you will learn how to use common conjunctions to link words, phrases, and sentences in Arabic.",
+            "type": "lsn",
+            "stepid": "92",
+            "order": "21",
+            "status": "inactive"
+          },
+          {
+            "id": "46",
+            "title": "Casual and Formal Speech",
+            "desc": "In this lesson you will learn the difference between casual and formal language and when to use each in Arabic.",
+            "type": "lsn",
+            "stepid": "93",
+            "order": "22",
+            "status": "inactive"
+          },
+          {
+            "id": "27",
+            "title": "أفعى الكلمات",
+            "desc": "تعلّم التمييز بين أنواع الكلمة المختلفة: الأفعال والأسماء والحروف.",
+            "config": "{\"filter\":\"\"}",
+            "type": "game",
+            "stepid": "226",
+            "order": "24",
+            "status": "inactive"
+          }
+        ],
+        "finished": false
+      },
+      {
+        "id": "4",
+        "labelar": "محادثة أساسية",
+        "labelen": "Conversational Arabic",
+        "desc": "Unit 4: You will learn phrases and language structure that allows you to have basic conversations, ask and answer questions.",
+        "content": null,
+        "config": {
+          "bgcolor": "#a964f7",
+          "bordercolor": "#b394ee",
+          "shadecolor": "#ffffff",
+          "randoms": [
+            "ytrees_1.png",
+            "ytrees_2.png",
+            "ytrees_3.png"
+          ]
+        },
+        "activities": [
+          {
+            "id": "48",
+            "title": "Basic Greetings",
+            "desc": "In this lesson you will learn essential greetings like \"مرحباً\" (marhaban) - Hello, \"صباح الخير\" (sabah al-khair) - Good morning, and \"مساء الخير\" (masa' al-khair) - Good evening.",
+            "type": "lsn",
+            "stepid": "95",
+            "order": "0",
+            "status": "inactive"
+          },
+          {
+            "id": "49",
+            "title": "Self-Introduction",
+            "desc": "In this lesson you will learn phrases like \"أنا\" (ana) - I am, \"اسمي\" (ismi) - My name is, and \"من\" (min) - From.",
+            "type": "lsn",
+            "stepid": "96",
+            "order": "1",
+            "status": "inactive"
+          },
+          {
+            "id": "50",
+            "title": "Asking Questions",
+            "desc": "In this lesson you will revise the use of question words like \"ما\" (ma) - What, \"من\" (min) - Who, \"كيف\" (kayfa) - How, and \"أين\" (ayn) - Where.",
+            "type": "lsn",
+            "stepid": "97",
+            "order": "2",
+            "status": "inactive"
+          },
+          {
+            "id": "51",
+            "title": "Answering Questions",
+            "desc": "In this lesson you will learn simple responses to questions, such as stating one's nationality, profession, or location in Arabic.",
+            "type": "lsn",
+            "stepid": "98",
+            "order": "3",
+            "status": "inactive"
+          },
+          {
+            "id": "52",
+            "title": "Daily Activities & Routines 1 (Verbs)",
+            "desc": "In this lesson you will revise vocabulary related to daily activities, such as \"أكل\" (akal) - Eat, \"شرب\" (sharib) - Drink, \"ذهب\" (dhahab) - Go, and \"نمت\" (namtu) - Slept.",
+            "type": "lsn",
+            "stepid": "99",
+            "order": "4",
+            "status": "inactive"
+          },
+          {
+            "id": "53",
+            "title": "Daily Activities & Routines 2 (Sentence Patterns)",
+            "desc": "In this lesson you will learn how to create sentences about daily routines, e.g., \"أنا ذاهب إلى العمل\" (Ana dhahib ila al-'amal) - I'm going to work.",
+            "type": "lsn",
+            "stepid": "100",
+            "order": "5",
+            "status": "inactive"
+          },
+          {
+            "id": "54",
+            "title": "Basic Shopping Vocabulary",
+            "desc": "In this lesson you will learn shopping-related words like \"سعر\" (si'ar) - Price, \"محل\" (mahal) - Shop, and \"شراء\" (shira') - Buy.",
+            "type": "lsn",
+            "stepid": "101",
+            "order": "6",
+            "status": "inactive"
+          },
+          {
+            "id": "55",
+            "title": "Numbers and Bargaining",
+            "desc": "In this lesson you will learn numbers 1-100 and how to use them in shopping contexts, including bargaining phrases like \"كم ثمنه؟\" (kam thamanuhu?) - How much does it cost?",
+            "type": "lsn",
+            "stepid": "102",
+            "order": "7",
+            "status": "inactive"
+          },
+          {
+            "id": "56",
+            "title": "Restaurant Vocabulary",
+            "desc": "In this lesson you will get introduced to words for ordering food and drinks, such as \"ماء\" (ma') - Water, \"قهوة\" (qahwah) - Coffee, and \"طلب\" (talab) - Order.",
+            "type": "lsn",
+            "stepid": "103",
+            "order": "8",
+            "status": "inactive"
+          },
+          {
+            "id": "57",
+            "title": "Placing an Order",
+            "desc": "In this lesson you will learn how to order food and drinks in a restaurant, including common phrases like \"أريد...\" (urid...) - I want... and \"فاتورة\" (faturah) - Bill.",
+            "type": "lsn",
+            "stepid": "104",
+            "order": "9",
+            "status": "inactive"
+          },
+          {
+            "id": "3",
+            "title": "في المطعم",
+            "desc": "",
+            "type": "convo",
+            "stepid": "116",
+            "order": "10",
+            "status": "inactive"
+          },
+          {
+            "id": "58",
+            "title": "Asking for Directions",
+            "desc": "In this lesson you will learn phrases for asking directions, like \"كيف أصل إلى...\" (kayfa usil ila...) - How do I get to...",
+            "type": "lsn",
+            "stepid": "105",
+            "order": "11",
+            "status": "inactive"
+          },
+          {
+            "id": "59",
+            "title": "Giving Directions",
+            "desc": "In this lesson you will revise and get introduced to directions and location-related words, e.g., \"يمين\" (yameen) - Right, \"شارع\" (shari') - Street, and \"بعيد\" (ba'eed) - Far.",
+            "type": "lsn",
+            "stepid": "106",
+            "order": "12",
+            "status": "inactive"
+          },
+          {
+            "id": "60",
+            "title": "Weather Expressions",
+            "desc": "In this lesson you will get introduced to weather-related phrases, such as \"الجو حار\" (al-jaw har) - It's hot, \"الطقس ممطر\" (at-taqs momtir) - The weather is rainy.",
+            "type": "lsn",
+            "stepid": "107",
+            "order": "13",
+            "status": "inactive"
+          },
+          {
+            "id": "61",
+            "title": "Time Expressions",
+            "desc": "In this lesson you will learn time-related words, including \"اليوم\" (al-yawm) - Today, \"غدًا\" (ghadan) - Tomorrow, and \"الساعة\" (as-sa'ah) - The time.",
+            "type": "lsn",
+            "stepid": "108",
+            "order": "14",
+            "status": "inactive"
+          },
+          {
+            "id": "62",
+            "title": "Small Talk",
+            "desc": "In this lesson you will learn phrases for casual conversations, such as \"كيف الحال؟\" (kayfa al-hal?) - How are you? and \"شكرًا\" (shukran) - Thank you.",
+            "type": "lsn",
+            "stepid": "109",
+            "order": "15",
+            "status": "inactive"
+          },
+          {
+            "id": "63",
+            "title": "Politeness",
+            "desc": "In this lesson you will learn polite expressions like \"من فضلك\" (min fadlik) - Please and \"عفوًا\" (‘afwan) - You're welcome.",
+            "type": "lsn",
+            "stepid": "110",
+            "order": "16",
+            "status": "inactive"
+          },
+          {
+            "id": "64",
+            "title": "Describing",
+            "desc": "In this lesson you will learn common adjectives for describing things, e.g., \"جميل\" (jameel) - Beautiful, \"لذيذ\" (latheeth) - Delicious.",
+            "type": "lsn",
+            "stepid": "111",
+            "order": "17",
+            "status": "inactive"
+          },
+          {
+            "id": "65",
+            "title": "Expressing Preferences",
+            "desc": "In this lesson you will learn how to express likes and dislikes using phrases like \"أحب\" (uhibbu) - I like and \"لا أحب\" (la uhibbu) - I don't like.",
+            "type": "lsn",
+            "stepid": "112",
+            "order": "18",
+            "status": "inactive"
+          },
+          {
+            "id": "66",
+            "title": "Making Plans",
+            "desc": "In this lesson you will learn phrases for making plans, such as \"هل ترغب في...؟\" (hal turghibu fi...?) - Would you like to...?",
+            "type": "lsn",
+            "stepid": "113",
+            "order": "19",
+            "status": "inactive"
+          },
+          {
+            "id": "67",
+            "title": "Accepting/Declining Invitations",
+            "desc": "In this lesson you will learn responses to invitations, like \"نعم\" (na'am) - Yes, \"لا\" (la) - No, and \"آسف\" (’aasif) - Sorry.",
+            "type": "lsn",
+            "stepid": "114",
+            "order": "20",
+            "status": "inactive"
+          }
+        ],
+        "finished": false
+      },
+      {
+        "id": "5",
+        "labelar": "قواعد ومفردات مستوى متوسط",
+        "labelen": "Intermediate Grammar and Vocabulary",
+        "desc": "Unit 5: You will learn more complex sentence structures, past and future tenses, possessive structures, and more complex vocabulary related to a variety of topics like food, travel, work, study, etc.",
+        "content": null,
+        "config": {
+          "bgcolor": "#d9554a",
+          "bordercolor": "#e17f7c",
+          "shadecolor": "#ffffff",
+          "randoms": [
+            "ancient_1.png",
+            "ancient_2.png",
+            "ancient_3.png"
+          ]
+        },
+        "activities": [
+          {
+            "id": "76",
+            "title": "Basic Grammar Review",
+            "desc": "In this lesson you will revise earlier grammar lessons and refresh your previous knowledge.",
+            "type": "lsn",
+            "stepid": "134",
+            "order": "1",
+            "status": "inactive"
+          },
+          {
+            "id": "77",
+            "title": "Basic Vocabulary Review",
+            "desc": "In this lesson you will revise basic vocabulary in Arabic and refresh your knowledge.",
+            "type": "lsn",
+            "stepid": "135",
+            "order": "2",
+            "status": "inactive"
+          },
+          {
+            "id": "78",
+            "title": "Verb Conjugation - Irregular Verbs",
+            "desc": "In this lesson you will review your previous knowledge about verb conjugation, with focus on irregular verbs & conjugation in Arabic.",
+            "type": "lsn",
+            "stepid": "136",
+            "order": "3",
+            "status": "inactive"
+          },
+          {
+            "id": "79",
+            "title": "Subordinating Conjunctions",
+            "desc": "In this lesson you get introduced to subordinating conjunctions (إذا - idha, عندما - ‘indama, etc.).",
+            "type": "lsn",
+            "stepid": "137",
+            "order": "4",
+            "status": "inactive"
+          },
+          {
+            "id": "80",
+            "title": "Complex Sentences",
+            "desc": "In this lesson you will learn how to build complex sentences using subordinate clauses.",
+            "type": "lsn",
+            "stepid": "138",
+            "order": "5",
+            "status": "inactive"
+          },
+          {
+            "id": "81",
+            "title": "Multiple Clauses Sentences",
+            "desc": "In this lesson you will practice forming sentences with multiple clauses.",
+            "type": "lsn",
+            "stepid": "139",
+            "order": "6",
+            "status": "inactive"
+          },
+          {
+            "id": "82",
+            "title": "Direct & Indirect Objects - Review",
+            "desc": "In this lesson you will review your knowledge of direct and indirect objects in Arabic.",
+            "type": "lsn",
+            "stepid": "140",
+            "order": "7",
+            "status": "inactive"
+          },
+          {
+            "id": "83",
+            "title": "Verbs & Indirect Objects",
+            "desc": "In this lesson you will learn about the relationship between verbs and indirect objects in Arabic.",
+            "type": "lsn",
+            "stepid": "141",
+            "order": "8",
+            "status": "inactive"
+          },
+          {
+            "id": "84",
+            "title": "Comparatives",
+            "desc": "In this lesson you will learn how to compare objects using comparatives in Arabic.",
+            "type": "lsn",
+            "stepid": "142",
+            "order": "9",
+            "status": "inactive"
+          },
+          {
+            "id": "85",
+            "title": "Superlatives",
+            "desc": "In this lesson you will learn about superlatives and how to use them on adjectives in Arabic.",
+            "type": "lsn",
+            "stepid": "143",
+            "order": "10",
+            "status": "inactive"
+          },
+          {
+            "id": "86",
+            "title": "Expressing Cause & Effect - 1",
+            "desc": "In this lesson you will learn causal conjunctions (لأن - li'ann, بسبب - bisabab, etc.).",
+            "type": "lsn",
+            "stepid": "144",
+            "order": "11",
+            "status": "inactive"
+          },
+          {
+            "id": "87",
+            "title": "Expressing Cause & Effect - 2",
+            "desc": "In this lesson you will learn how to discuss reasons and consequences in sentences in Arabic.",
+            "type": "lsn",
+            "stepid": "145",
+            "order": "12",
+            "status": "inactive"
+          },
+          {
+            "id": "88",
+            "title": "Conditional Sentences - 2",
+            "desc": "In this lesson you will learn new things about conditional sentences with unreal or contrary-to-fact conditions in Arabic.",
+            "type": "lsn",
+            "stepid": "146",
+            "order": "13",
+            "status": "inactive"
+          },
+          {
+            "id": "89",
+            "title": "Conditional Sentences - If only",
+            "desc": "In this lesson you will learn how to use the \"لو\" (law) particle and the past tense for hypothetical situations.",
+            "type": "lsn",
+            "stepid": "147",
+            "order": "14",
+            "status": "inactive"
+          },
+          {
+            "id": "90",
+            "title": "Idioms & Proverbs - 1",
+            "desc": "In this lesson you will learn common Arabic idioms and proverbs.",
+            "type": "lsn",
+            "stepid": "148",
+            "order": "15",
+            "status": "inactive"
+          },
+          {
+            "id": "91",
+            "title": "Idioms & Proverbs - 2",
+            "desc": "In this lesson you will explore cultural and linguistic nuances through idiomatic expressions.",
+            "type": "lsn",
+            "stepid": "149",
+            "order": "16",
+            "status": "inactive"
+          },
+          {
+            "id": "92",
+            "title": "Expanded Vocabulary - Professions",
+            "desc": "In this lesson you will get introduced to expanded vocabulary about professions in Arabic.",
+            "type": "lsn",
+            "stepid": "150",
+            "order": "17",
+            "status": "inactive"
+          },
+          {
+            "id": "93",
+            "title": "Expanded Vocabulary - Hobbies",
+            "desc": "In this lesson you will get introduced to expanded vocabulary about hobbies in Arabic.",
+            "type": "lsn",
+            "stepid": "151",
+            "order": "18",
+            "status": "inactive"
+          },
+          {
+            "id": "94",
+            "title": "Cultural Expressions",
+            "desc": "In this lesson you will explore cultural expressions and etiquette in Arabic-speaking societies.",
+            "type": "lsn",
+            "stepid": "152",
+            "order": "19",
+            "status": "inactive"
+          },
+          {
+            "id": "95",
+            "title": "Politeness - 2",
+            "desc": "In this lesson you will learn about formal and informal expressions of gratitude, apology, and appreciation in Arabic.",
+            "type": "lsn",
+            "stepid": "153",
+            "order": "20",
+            "status": "inactive"
+          }
+        ],
+        "finished": false
+      },
+      {
+        "id": "6",
+        "labelar": "قراءة وكتابة",
+        "labelen": "Reading and Writing",
+        "desc": "Unit 6: You will begin reading and writing short paragraphs. This can include simple narratives, descriptive paragraphs, and more.",
+        "content": null,
+        "config": {
+          "bgcolor": "#92e0f8",
+          "bordercolor": "#bcf7fd",
+          "shadecolor": "#ffffff",
+          "randoms": [
+            "glacier_1.png",
+            "glacier_2.png",
+            "glacier_3.png"
+          ]
+        },
+        "activities": [
+          {
+            "id": "96",
+            "title": "Reading - Review 1",
+            "desc": "In this lesson you will review your prior knowledge in Arabic reading, the basics of reading right-to-left and revising different letter forms.",
+            "type": "lsn",
+            "stepid": "154",
+            "order": "1",
+            "status": "inactive"
+          },
+          {
+            "id": "97",
+            "title": "Reading - Review 2",
+            "desc": "In this lesson you will revise your prior knowledge in diacritics (vowel marks) and their role in aiding reading, in addition to long vowels (mudood).",
+            "type": "lsn",
+            "stepid": "155",
+            "order": "2",
+            "status": "inactive"
+          },
+          {
+            "id": "98",
+            "title": "Building Vocabulary through Reading",
+            "desc": "In this lesson you will get introduced to thematic vocabulary related to everyday life.",
+            "type": "lsn",
+            "stepid": "156",
+            "order": "3",
+            "status": "inactive"
+          },
+          {
+            "id": "99",
+            "title": "Comprehension Skills and Inference",
+            "desc": "In this lesson you will learn strategies for understanding implied meaning and making inferences from context.",
+            "type": "lsn",
+            "stepid": "157",
+            "order": "4",
+            "status": "inactive"
+          },
+          {
+            "id": "100",
+            "title": "Descriptive Writing - Introducing Yourself",
+            "desc": "In this lesson you will practice writing a self-introduction paragraph incorporating learned vocabulary and grammar into writing.",
+            "type": "lsn",
+            "stepid": "158",
+            "order": "5",
+            "status": "inactive"
+          },
+          {
+            "id": "101",
+            "title": "Opinion Writing - Expressing Preferences",
+            "desc": "In this lesson you will learn phrases for expressing opinions and preferences. Writing a short paragraph about a favorite food, hobby, or place.",
+            "type": "lsn",
+            "stepid": "159",
+            "order": "6",
+            "status": "inactive"
+          },
+          {
+            "id": "102",
+            "title": "Narrative Writing - Personal Stories",
+            "desc": "In this lesson you will learn narrative structures for recounting personal experiences. Writing a short narrative about a memorable event. Discussing narrative elements like setting, characters, and plot.\r\n",
+            "type": "lsn",
+            "stepid": "160",
+            "order": "7",
+            "status": "inactive"
+          },
+          {
+            "id": "103",
+            "title": "Reading Comprehension - Cultural Texts",
+            "desc": "In this lesson you will get introduced to cultural texts, such as folktales, poems, or short stories.",
+            "type": "lsn",
+            "stepid": "161",
+            "order": "8",
+            "status": "inactive"
+          },
+          {
+            "id": "104",
+            "title": "Expository Writing - Describing Processes",
+            "desc": "In this lesson you will learn vocabulary and phrases for describing processes or procedures. Writing a step-by-step guide on a simple process (e.g., making tea).",
+            "type": "lsn",
+            "stepid": "162",
+            "order": "9",
+            "status": "inactive"
+          },
+          {
+            "id": "105",
+            "title": "Persuasive Writing - Expressing Opinions",
+            "desc": "In this lesson you will get introduced persuasive language and techniques. Writing a persuasive paragraph about a chosen topic.",
+            "type": "lsn",
+            "stepid": "163",
+            "order": "10",
+            "status": "inactive"
+          },
+          {
+            "id": "106",
+            "title": "Writing an Informal Letter or Email",
+            "desc": "In this lesson you will learn the structure and conventions of writing informal correspondence. Writing a letter or email to a friend or family member in Arabic.",
+            "type": "lsn",
+            "stepid": "164",
+            "order": "11",
+            "status": "inactive"
+          },
+          {
+            "id": "107",
+            "title": "Creative Writing - Short Story or Dialogue",
+            "desc": "In this lesson you will learn about writing a short fictional story or dialogue incorporating new vocabulary.",
+            "type": "lsn",
+            "stepid": "165",
+            "order": "12",
+            "status": "inactive"
+          }
+        ],
+        "finished": false
+      },
+      {
+        "id": "7",
+        "labelar": "استماع ومحادثة",
+        "labelen": "Listening and Speaking",
+        "desc": "Unit 7: You will have intensive practice with listening and speaking activities with focus on clear pronunciation and intonation.",
+        "content": null,
+        "config": {
+          "bgcolor": "#e5856f",
+          "bordercolor": "#efb2a7",
+          "shadecolor": "#ffffff",
+          "randoms": [
+            "rdesert_1.png",
+            "rdesert_2.png",
+            "rdesert_3.png"
+          ]
+        },
+        "activities": [
+          {
+            "id": "108",
+            "title": "Introduction to Listening and Speaking Skills",
+            "desc": "In this lesson you will learn the importance of listening and speaking skills in language acquisition.",
+            "type": "lsn",
+            "stepid": "166",
+            "order": "1",
+            "status": "inactive"
+          },
+          {
+            "id": "109",
+            "title": "Listening to Basic Conversations",
+            "desc": "In this lesson you will learn how to identify key phrases, greetings, and introductions listening to basic conversations.",
+            "type": "lsn",
+            "stepid": "167",
+            "order": "2",
+            "status": "inactive"
+          },
+          {
+            "id": "110",
+            "title": "Vocabulary Building through Listening",
+            "desc": "In this lesson you will get introduced to thematic vocabulary related to daily life. As well as guidance on how to build your vocabulary through listening.",
+            "type": "lsn",
+            "stepid": "168",
+            "order": "3",
+            "status": "inactive"
+          },
+          {
+            "id": "111",
+            "title": "Comprehension Skills and Note-Taking",
+            "desc": "In this lesson you will learn strategies for improving listening comprehension. practicing note-taking during audio activities.",
+            "type": "lsn",
+            "stepid": "169",
+            "order": "4",
+            "status": "inactive"
+          },
+          {
+            "id": "112",
+            "title": "Pronunciation and Intonation Practice",
+            "desc": "In this lesson you will learn about intonation patterns in different types of sentences.",
+            "type": "lsn",
+            "stepid": "170",
+            "order": "5",
+            "status": "inactive"
+          },
+          {
+            "id": "113",
+            "title": "Listening for Specific Information",
+            "desc": "In this lesson you will learn how to focus on specific information listening to audio clips. answering questions based on the content of the audio. learning about information-gap activities with peers.",
+            "type": "lsn",
+            "stepid": "171",
+            "order": "6",
+            "status": "inactive"
+          },
+          {
+            "id": "114",
+            "title": "Listening to Authentic Materials",
+            "desc": "In this lesson you will get introduced to authentic audio materials, such as songs, news clips, or interviews.",
+            "type": "lsn",
+            "stepid": "172",
+            "order": "7",
+            "status": "inactive"
+          },
+          {
+            "id": "115",
+            "title": "Role-Playing Situations",
+            "desc": "In this lesson you will practice real-life situations through role plays. Simulating scenarios like ordering food, asking for directions, or making phone calls. Developing fluency and improvisation skills.",
+            "type": "lsn",
+            "stepid": "173",
+            "order": "8",
+            "status": "inactive"
+          },
+          {
+            "id": "116",
+            "title": "Listening to Different Accents and Dialects",
+            "desc": "In this lesson you will get exposed to various Arabic accents and dialects. Listening to audio clips from different regions. Discussing similarities and differences in pronunciation and vocabulary.",
+            "type": "lsn",
+            "stepid": "174",
+            "order": "9",
+            "status": "inactive"
+          },
+          {
+            "id": "117",
+            "title": "Conversation Skills - Expressing Opinions",
+            "desc": "In this lesson you will learn phrases for expressing opinions, agreement, and disagreement. Engaging in discussions on various topics. Structured debates and group conversations.",
+            "type": "lsn",
+            "stepid": "175",
+            "order": "10",
+            "status": "inactive"
+          },
+          {
+            "id": "118",
+            "title": "Listening to Audio Stories or Podcasts",
+            "desc": "In this lesson you will get introduced to longer audio materials, such as stories or podcasts. Listening for comprehension and summarizing the content.",
+            "type": "lsn",
+            "stepid": "176",
+            "order": "11",
+            "status": "inactive"
+          },
+          {
+            "id": "119",
+            "title": "Presentation Skills - Describing Topics",
+            "desc": "In this lesson you will prepare and deliver short presentations on chosen topics. Using visual aids and expressive language. Receiving feedback and improving presentation skills.",
+            "type": "lsn",
+            "stepid": "177",
+            "order": "12",
+            "status": "inactive"
+          }
+        ],
+        "finished": false
+      },
+      {
+        "id": "8",
+        "labelar": "مفردات وقواعد متقدّمة",
+        "labelen": "Advanced Vocabulary and Grammar",
+        "desc": "Unit 8: You will master more complex language structures and developing a richer vocabulary. You will also begin studying idioms and common expressions.",
+        "content": null,
+        "config": {
+          "bgcolor": "#8d50e1",
+          "bordercolor": "#b394ee",
+          "shadecolor": "#ffffff",
+          "randoms": [
+            "ptown_1.png",
+            "ptown_2.png",
+            "ptown_3.png"
+          ]
+        },
+        "activities": [
+          {
+            "id": "120",
+            "title": "Intermediate Grammar - Revision",
+            "desc": "In this lesson you will revise intermediate grammar lessons and refresh your previous knowledge.",
+            "type": "lsn",
+            "stepid": "178",
+            "order": "1",
+            "status": "inactive"
+          },
+          {
+            "id": "121",
+            "title": "Intermediate Vocabulary - Revision",
+            "desc": "In this lesson you will revise intermediate vocabulary in Arabic and refresh your knowledge.",
+            "type": "lsn",
+            "stepid": "179",
+            "order": "2",
+            "status": "inactive"
+          },
+          {
+            "id": "122",
+            "title": "Advanced Verb Forms and Conjugation",
+            "desc": "In this lesson you will get introduced to advanced verb forms (e.g., passive, causative). Practice with conjugating complex verbs across different tenses.",
+            "type": "lsn",
+            "stepid": "180",
+            "order": "3",
+            "status": "inactive"
+          },
+          {
+            "id": "123",
+            "title": "Advanced Sentence Structures",
+            "desc": "In this lesson you will explore complex sentence structures (e.g., conditional clauses, relative clauses). Creating sentences with embedded clauses.",
+            "type": "lsn",
+            "stepid": "181",
+            "order": "4",
+            "status": "inactive"
+          },
+          {
+            "id": "124",
+            "title": "Idiomatic Expressions and Proverbs",
+            "desc": "In this lesson you will get introduced to advanced idiomatic expressions and proverbs. Discussing cultural and linguistic nuances conveyed by idioms.",
+            "type": "lsn",
+            "stepid": "182",
+            "order": "5",
+            "status": "inactive"
+          },
+          {
+            "id": "125",
+            "title": "Emphasizing and Intensifying",
+            "desc": "In this lesson you will learn emphatic structures for intensifying meanings. Using \"نفس\" (nafs) and \"لاحظ\" (laḥaẓ) for emphasis.",
+            "type": "lsn",
+            "stepid": "183",
+            "order": "6",
+            "status": "inactive"
+          },
+          {
+            "id": "126",
+            "title": "Advanced Vocabulary - Science",
+            "desc": "In this lesson you will get introduced to advanced vocabulary in the topic of science. Reading and discussing articles or texts on scientific topics.",
+            "type": "lsn",
+            "stepid": "184",
+            "order": "7",
+            "status": "inactive"
+          },
+          {
+            "id": "127",
+            "title": "Advanced Vocabulary - Technology",
+            "desc": "In this lesson you will get introduced to advanced vocabulary in the topic of technology and innovation. Reading and discussing articles or texts on on technological advancements.",
+            "type": "lsn",
+            "stepid": "185",
+            "order": "8",
+            "status": "inactive"
+          },
+          {
+            "id": "128",
+            "title": "Complex Prepositions and Particles",
+            "desc": "In this lesson you will learn advanced prepositions and particles (e.g., لأجل - li'ajl, غير أن - ghayr an). Analyzing their usage in different contexts.",
+            "type": "lsn",
+            "stepid": "186",
+            "order": "9",
+            "status": "inactive"
+          },
+          {
+            "id": "129",
+            "title": "Advanced Reading and Analysis",
+            "desc": "[PLACEHOLDER FOR BOOKS TO ADD]",
+            "type": "lsn",
+            "stepid": "187",
+            "order": "10",
+            "status": "inactive"
+          },
+          {
+            "id": "130",
+            "title": "Expressing Cause and Effect in Depth",
+            "desc": "In this lesson you will conduct an advanced study of cause-and-effect relationships. Using advanced conjunctions to convey specific relationships.",
+            "type": "lsn",
+            "stepid": "188",
+            "order": "11",
+            "status": "inactive"
+          },
+          {
+            "id": "131",
+            "title": "Advanced Vocabulary - Arts",
+            "desc": "In this lesson you will get introduced to vocabulary related to arts. Discussing works of art.",
+            "type": "lsn",
+            "stepid": "189",
+            "order": "12",
+            "status": "inactive"
+          },
+          {
+            "id": "132",
+            "title": "Advanced Vocabulary - Culture",
+            "desc": "In this lesson you will get introduced to vocabulary related to culture, and humanities. Discussing works of literature or cultural practices.",
+            "type": "lsn",
+            "stepid": "190",
+            "order": "13",
+            "status": "inactive"
+          }
+        ],
+        "finished": false
+      },
+      {
+        "id": "9",
+        "labelar": "استيعاب قرائي",
+        "labelen": "Reading Comprehension",
+        "desc": "Unit 9: You will start reading longer texts like articles, short stories, and books, with an emphasis on comprehension and vocabulary acquisition.",
+        "content": null,
+        "config": {
+          "bgcolor": "#8d98f4",
+          "bordercolor": "#7a9af8",
+          "shadecolor": "#ffffff",
+          "randoms": [
+            "sea_1.png",
+            "sea_2.png",
+            "sea_3.png"
+          ]
+        },
+        "activities": [
+          {
+            "id": "133",
+            "title": "Introduction to Reading Comprehension",
+            "desc": "In this lesson you will learn the importance of strong reading skills for advanced learners. Setting goals for improving reading comprehension and critical thinking.",
+            "type": "lsn",
+            "stepid": "191",
+            "order": "1",
+            "status": "inactive"
+          },
+          {
+            "id": "134",
+            "title": "Analyzing Complex Texts",
+            "desc": "In this lesson you will get introduced to to longer and more complex texts (articles, essays, stories). Strategies for analyzing main ideas, supporting details, and author's tone.",
+            "type": "lsn",
+            "stepid": "192",
+            "order": "2",
+            "status": "inactive"
+          },
+          {
+            "id": "135",
+            "title": "In-Depth Vocabulary Exploration",
+            "desc": "In this lesson you will explore advanced vocabulary encountered in texts. Discussing nuances of meanings and synonyms. Exercising vocabulary-building activities through context and word associations.",
+            "type": "lsn",
+            "stepid": "193",
+            "order": "3",
+            "status": "inactive"
+          },
+          {
+            "id": "136",
+            "title": "Inferring and Drawing Conclusions",
+            "desc": "In this lesson you will learn strategies for making inferences from the text. Identifying implied information and underlying messages.",
+            "type": "lsn",
+            "stepid": "194",
+            "order": "4",
+            "status": "inactive"
+          },
+          {
+            "id": "137",
+            "title": "Summarizing Complex Texts",
+            "desc": "In this lesson you will learn techniques for summarizing longer texts concisely. Identifying main points and key supporting details.",
+            "type": "lsn",
+            "stepid": "195",
+            "order": "5",
+            "status": "inactive"
+          },
+          {
+            "id": "138",
+            "title": "Analyzing Text Structure and Organization",
+            "desc": "In this lesson you will learn how to recognize different text structures (narrative, descriptive, argumentative). Analyzing how the organization contributes to the overall message.",
+            "type": "lsn",
+            "stepid": "196",
+            "order": "6",
+            "status": "inactive"
+          },
+          {
+            "id": "139",
+            "title": "Engaging with Different Genres",
+            "desc": "In this lesson you will get introduced a variety of text genres (literary, scientific, persuasive). Reflecting on how different genres require different reading strategies.",
+            "type": "lsn",
+            "stepid": "197",
+            "order": "7",
+            "status": "inactive"
+          },
+          {
+            "id": "140",
+            "title": "Critical Thinking and Evaluation",
+            "desc": "In this lesson you will learn how to critically evaluate the content they read. Analyzing the author's credibility, bias, and sources.",
+            "type": "lsn",
+            "stepid": "198",
+            "order": "8",
+            "status": "inactive"
+          },
+          {
+            "id": "141",
+            "title": "Cross-Textual Connections",
+            "desc": "In this lesson you will explore how different texts relate to each other thematically. Drawing connections between ideas from multiple sources.",
+            "type": "lsn",
+            "stepid": "199",
+            "order": "9",
+            "status": "inactive"
+          },
+          {
+            "id": "142",
+            "title": "Interpreting Cultural References",
+            "desc": "In this lesson you will read texts with cultural references and idiomatic expressions. Discussing the cultural significance of these references.",
+            "type": "lsn",
+            "stepid": "200",
+            "order": "10",
+            "status": "inactive"
+          },
+          {
+            "id": "143",
+            "title": "Literature and Literary Analysis",
+            "desc": "In this lesson you will get introduced to literary texts and techniques (metaphor, symbolism, etc.).",
+            "type": "lsn",
+            "stepid": "201",
+            "order": "11",
+            "status": "inactive"
+          },
+          {
+            "id": "144",
+            "title": "Analyzing Argumentative Texts",
+            "desc": "In this lesson you will focus on argumentative or persuasive texts. Identifying premises, claims, and counterarguments.",
+            "type": "lsn",
+            "stepid": "202",
+            "order": "12",
+            "status": "inactive"
+          }
+        ],
+        "finished": false
+      },
+      {
+        "id": "10",
+        "labelar": "مهارات الكتابة",
+        "labelen": "Writing Skills",
+        "desc": "Unit 10: You will write in Arabic, starting from paragraphs and moving on to essays and other forms of written expression.",
+        "content": null,
+        "config": {
+          "bgcolor": "#e7ad56",
+          "bordercolor": "#f4d18a",
+          "shadecolor": "#ffffff",
+          "randoms": [
+            "farm_1.png",
+            "farm_2.png",
+            "farm_3.png"
+          ]
+        },
+        "activities": [
+          {
+            "id": "145",
+            "title": "Introduction to Effective Writing",
+            "desc": "In this lesson you will learn the importance of effective writing skills for advanced language learners. Setting goals for improving writing clarity, structure, and style.",
+            "type": "lsn",
+            "stepid": "203",
+            "order": "1",
+            "status": "inactive"
+          },
+          {
+            "id": "146",
+            "title": "Crafting Well-Structured Paragraphs",
+            "desc": "In this lesson you will review the elements of a well-structured paragraph. Practicing writing paragraphs with clear topic sentences and supporting details.",
+            "type": "lsn",
+            "stepid": "204",
+            "order": "2",
+            "status": "inactive"
+          },
+          {
+            "id": "147",
+            "title": "Elaboration and Development in Writing",
+            "desc": "In this lesson you will learn techniques for elaborating on ideas in writing. Adding relevant examples, explanations, and details.",
+            "type": "lsn",
+            "stepid": "205",
+            "order": "3",
+            "status": "inactive"
+          },
+          {
+            "id": "148",
+            "title": "Writing Coherent Essays",
+            "desc": "In this lesson you will get introduced to essay structures (introduction, body, conclusion). Analyzing sample essays for coherence and organization.",
+            "type": "lsn",
+            "stepid": "206",
+            "order": "4",
+            "status": "inactive"
+          },
+          {
+            "id": "149",
+            "title": "Argumentative Writing",
+            "desc": "In this lesson you will learn the structure of argumentative essays. Formulating and supporting clear thesis statements.",
+            "type": "lsn",
+            "stepid": "207",
+            "order": "5",
+            "status": "inactive"
+          },
+          {
+            "id": "150",
+            "title": "Expressive and Descriptive Writing",
+            "desc": "In this lesson you will explore descriptive and expressive writing styles. Engaging the senses and emotions in writing. Crafting descriptive paragraphs or short stories.",
+            "type": "lsn",
+            "stepid": "208",
+            "order": "6",
+            "status": "inactive"
+          },
+          {
+            "id": "151",
+            "title": "Research and Citations",
+            "desc": "In this lesson you will get introduced to conducting research and integrating sources. Teaching citation styles and proper referencing. Writing essays or reports that incorporate research.",
+            "type": "lsn",
+            "stepid": "209",
+            "order": "7",
+            "status": "inactive"
+          },
+          {
+            "id": "152",
+            "title": "Writing for Different Audiences and Purposes",
+            "desc": "In this lesson you will learn how to adapt your writing style for different audiences. Practicing formal, informal, and academic writing. Creating mock emails, formal letters, and essays.",
+            "type": "lsn",
+            "stepid": "210",
+            "order": "8",
+            "status": "inactive"
+          },
+          {
+            "id": "153",
+            "title": "Creative Writing - Short Stories",
+            "desc": "In this lesson you will learn about developing characters, plot, and themes.",
+            "type": "lsn",
+            "stepid": "211",
+            "order": "9",
+            "status": "inactive"
+          },
+          {
+            "id": "154",
+            "title": "Creative Writing - Poems",
+            "desc": "In this lesson you will get a brief introduction about poetry in Arabic, and basic knowledge about the rules for writing poetry.",
+            "type": "lsn",
+            "stepid": "212",
+            "order": "10",
+            "status": "inactive"
+          },
+          {
+            "id": "155",
+            "title": "Reflection and Revision",
+            "desc": "In this lesson you will learn the importance of revision and self-editing. Revising previous written work for clarity, coherence, and grammar.",
+            "type": "lsn",
+            "stepid": "213",
+            "order": "11",
+            "status": "inactive"
+          },
+          {
+            "id": "156",
+            "title": "Writing for Professional Contexts",
+            "desc": "In this lesson you will get introduced to formal writing in professional contexts. Crafting resumes, cover letters, and job application emails.",
+            "type": "lsn",
+            "stepid": "214",
+            "order": "12",
+            "status": "inactive"
+          },
+          {
+            "id": "157",
+            "title": "Writing Reflections and Critical Responses",
+            "desc": "In this lesson you will learn how to reflect critically on readings or experiences. Writing reflective essays or critical responses.",
+            "type": "lsn",
+            "stepid": "215",
+            "order": "13",
+            "status": "inactive"
+          }
+        ],
+        "finished": false
+      },
+      {
+        "id": "11",
+        "labelar": "معرفة ثقافية",
+        "labelen": "Cultural Knowledge",
+        "desc": "Unit 11: You will focus on gaining cultural knowledge. This includes understanding social norms, etiquette, traditions, history, literature, etc.",
+        "content": null,
+        "config": {
+          "bgcolor": "#de6496",
+          "bordercolor": "#ec9bc1",
+          "shadecolor": "#ffffff",
+          "randoms": [
+            "circus_1.png",
+            "circus_2.png",
+            "circus_3.png"
+          ]
+        },
+        "activities": [
+          {
+            "id": "158",
+            "title": "Introduction to Cultural Awareness",
+            "desc": "In this lesson you will learn the importance of cultural knowledge for effective communication. Setting goals for understanding cultural nuances in Arabic-speaking societies.",
+            "type": "lsn",
+            "stepid": "216",
+            "order": "1",
+            "status": "inactive"
+          },
+          {
+            "id": "159",
+            "title": "Arab World Geography and Diversity",
+            "desc": "In this lesson you will get an overview of the Arab world's geography and diverse regions. Exploring cultural differences across countries. Discussions on similarities and differences within the Arab world.",
+            "type": "lsn",
+            "stepid": "217",
+            "order": "2",
+            "status": "inactive"
+          },
+          {
+            "id": "160",
+            "title": "Arabic Literature and Poetry",
+            "desc": "In this lesson you will get introduced to classical and contemporary Arabic literature. Reading excerpts from famous Arabic literature and poetry. Analyzing themes, cultural values, and historical context.",
+            "type": "lsn",
+            "stepid": "218",
+            "order": "3",
+            "status": "inactive"
+          },
+          {
+            "id": "161",
+            "title": "Arabic Music, Art, and Film",
+            "desc": "In this lesson you will get introduced to the cultural significance of Arabic music, art, and film. Listening to traditional and modern music, viewing artwork, and watching films. Discussions on the role of art in reflecting society.",
+            "type": "lsn",
+            "stepid": "219",
+            "order": "4",
+            "status": "inactive"
+          },
+          {
+            "id": "162",
+            "title": "Religious and Festive Traditions",
+            "desc": "In this lesson you will learn about the religious practices and festivals in the Arab world. Exploring customs during Ramadan, Eid, and other significant occasions. Reflecting on the role of religion in daily life.",
+            "type": "lsn",
+            "stepid": "220",
+            "order": "5",
+            "status": "inactive"
+          },
+          {
+            "id": "163",
+            "title": "Arabic Calligraphy and Visual Culture",
+            "desc": "In this lesson you will explore the art of Arabic calligraphy. Creating simple calligraphic designs and learning about its cultural importance.",
+            "type": "lsn",
+            "stepid": "221",
+            "order": "6",
+            "status": "inactive"
+          },
+          {
+            "id": "164",
+            "title": "Contemporary Issues and Challenges",
+            "desc": "In this lesson you will learn about contemporary social, political, and environmental challenges. Reading articles and news reports on current topics.",
+            "type": "lsn",
+            "stepid": "222",
+            "order": "7",
+            "status": "inactive"
+          },
+          {
+            "id": "165",
+            "title": "Arabic Cuisine and Gastronomy",
+            "desc": "In this lesson you will explore traditional Arabic dishes and culinary customs. Learning about the role of food in culture and hospitality.",
+            "type": "lsn",
+            "stepid": "223",
+            "order": "8",
+            "status": "inactive"
+          },
+          {
+            "id": "166",
+            "title": "Cultural Etiquette and Social Norms",
+            "desc": "In this lesson you will get introduced to cultural norms and etiquette in Arabic-speaking societies. Learning about greetings, gestures, and interpersonal communication.",
+            "type": "lsn",
+            "stepid": "224",
+            "order": "9",
+            "status": "inactive"
+          },
+          {
+            "id": "167",
+            "title": "Historical and Architectural Heritage",
+            "desc": "In this lesson you will explore historical sites and architectural marvels in the Arab world. Discussing the significance of cultural heritage preservation.",
+            "type": "lsn",
+            "stepid": "225",
+            "order": "10",
+            "status": "inactive"
+          }
+        ],
+        "finished": false
+      }
+    ],
+    "mascot": {
+      "id": "2",
+      "name": "rama",
+      "url": "https://static.3asafeer.com/animations/rama.riv",
+      "config": null
+    }
+  }
+}

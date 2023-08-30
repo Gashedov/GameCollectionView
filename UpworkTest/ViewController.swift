@@ -1,13 +1,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-    private let layout = InvertedStackLayout()
+    private let viewModel = ViewModel()
+    
+    private let layout = GameRoadMapLayout()
     private lazy var gameCollectionView: UICollectionView = {
         return UICollectionView(frame: .zero, collectionViewLayout: layout)
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.delegate = self
         
         view.addSubview(gameCollectionView)
         gameCollectionView.snp.makeConstraints {
@@ -19,27 +23,55 @@ class ViewController: UIViewController {
         gameCollectionView.registerHeader(GameCollectionViewHeader.self)
         gameCollectionView.dataSource = self
         gameCollectionView.delegate = self
+        
+        gameCollectionView.showsVerticalScrollIndicator = false
+        gameCollectionView.showsHorizontalScrollIndicator = false
+        
+        gameCollectionView.contentInset = .init(top: 20, left: 0, bottom: 0, right: 0)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let itemsPerRow = Int(gameCollectionView.frame.width/layout.cellSize)
+        viewModel.loadData(itemsPerRow)
     }
 }
 
 extension ViewController: UICollectionViewDelegate {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
+    ) {
+        guard indexPath.section < viewModel.units.count,
+              indexPath.item < viewModel.units[indexPath.section].activities.count else { return }
+        
+        let model = viewModel.units[indexPath.section].activities[indexPath.item]
+        switch model.type {
+        case "lsn": print("items selected \(model.type)")
+        case "book": print("items selected \(model.type)")
+        case "video": print("items selected \(model.type)")
+        case "ai": print("items selected \(model.type)")
+        case "game": print("items selected \(model.type)")
+        case "exercise": print("items selected \(model.type)")
+        default:
+            break
+        }
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 5
+        return viewModel.units.count
     }
     
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        let count = 22
-        let itemsPerRow = Int(collectionView.frame.width/layout.cellSize)
-        if count%itemsPerRow != 0 {
-            return count + (itemsPerRow - count%itemsPerRow)
+        guard section < viewModel.units.count else {
+            return 0
         }
-        return count
+        return viewModel.units[section].activities.count
     }
     
     func collectionView(
@@ -48,8 +80,12 @@ extension ViewController: UICollectionViewDataSource {
         at indexPath: IndexPath
     ) -> UICollectionReusableView {
         let header: GameCollectionViewHeader = collectionView.dequeueReusableHeaderView(for: indexPath)
-        header.configure(with: "Title number \(indexPath.section)", and: .lightGray)
-        //supplementaryView.backgroundColor = UIColor.blueColor()
+        guard indexPath.section < viewModel.units.count else {
+            return header
+        }
+        
+        let model = viewModel.units[indexPath.section]
+        header.configure(with: model.label)
         return header
     }
     
@@ -58,66 +94,90 @@ extension ViewController: UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         let cell: GameCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.configure(with: indexPath.item)
+        
+        guard indexPath.section < viewModel.units.count,
+              indexPath.item < viewModel.units[indexPath.section].activities.count else {
+            return cell
+        }
+        
+        let config = viewModel.units[indexPath.section].config
+        let model = viewModel.units[indexPath.section].activities[indexPath.item]
+        
+        cell.configure(badgeImageName: model.imageName, primaryColorHEX: config.backgroundColor)
         configureLines(cell: cell, at: indexPath)
-        configureCorners(cell: cell, at: indexPath)
+        
+        if indexPath.item == 0 {
+            cell.configureStartImage(visible: true)
+        }
+        
         return cell
     }
     
     private func configureLines(cell: GameCollectionViewCell, at indexPath: IndexPath) {
+        guard indexPath.section < viewModel.units.count,
+              indexPath.item < viewModel.units[indexPath.section].activities.count
+        else { return }
+        
+        if viewModel.units[indexPath.section].activities[indexPath.item].type == "filler" {
+            return
+        }
+        
+        var isLast = indexPath.item == gameCollectionView.numberOfItems(inSection: indexPath.section) - 1
+        
+        if indexPath.item+1 < viewModel.units[indexPath.section].activities.count,
+           viewModel.units[indexPath.section].activities[indexPath.item+1].type == "filler" {
+            isLast = true
+        }
+        
         let isFirstInRow = indexPath.item%layout.itemsPerRow == 0
         let isLastInRow = indexPath.item%layout.itemsPerRow == layout.itemsPerRow-1
         let isInBackwardRow = (indexPath.item/layout.itemsPerRow)%2 != 0
         
+        var lineDerection: LineType
         if indexPath.item == 0 {
-            cell.configureLine(lineTipe: .begin)
-        } else if indexPath.item == gameCollectionView.numberOfItems(inSection: indexPath.section) - 1 {
+            lineDerection = .begin
+        } else if isLast {
             if isInBackwardRow {
-                cell.configureLine(lineTipe: .begin)
+                if isFirstInRow {
+                    lineDerection = .up
+                } else {
+                    lineDerection = .begin
+                }
             } else {
-                cell.configureLine(lineTipe: .end)
+                if isFirstInRow {
+                    lineDerection = .up
+                } else {
+                    lineDerection = .end
+                }
             }
         } else if isFirstInRow {
             if isInBackwardRow {
-                cell.configureLine(lineTipe: .topLeft)
+                lineDerection = .topLeft
             } else {
-                cell.configureLine(lineTipe: .topRight)
+                lineDerection = .topRight
             }
         } else if isLastInRow {
             if isInBackwardRow {
-                cell.configureLine(lineTipe: .rightDown)
+                lineDerection = .rightDown
             } else {
-                cell.configureLine(lineTipe: .leftDown)
+                lineDerection = .leftDown
             }
         }
         else {
-            cell.configureLine(lineTipe: .horizantal)
+            lineDerection = .horizantal
         }
+       cell.configureLine(lineTipe: lineDerection)
     }
-    
-    private func configureCorners(cell: GameCollectionViewCell, at indexPath: IndexPath) {
-        let numberOfItemsInSection = gameCollectionView.numberOfItems(inSection: indexPath.section)
-        let isLastInFirstRow = indexPath.item == layout.itemsPerRow-1
-        let isFirstInLastRow = indexPath.item == numberOfItemsInSection - layout.itemsPerRow
-        let isInBackwardRow = (indexPath.item/layout.itemsPerRow)%2 != 0
-        
-        if indexPath.item == 0 {
-            cell.roundCorners(corners: .topLeft)
-        } else if indexPath.item == numberOfItemsInSection - 1 {
-            if isInBackwardRow {
-                cell.roundCorners(corners: .bottomLeft)
-            } else {
-                cell.roundCorners(corners: .bottomRight)
-            }
-        } else if isLastInFirstRow {
-                cell.roundCorners(corners: .topRight)
-        } else if isFirstInLastRow {
-            if isInBackwardRow {
-                cell.roundCorners(corners: .bottomRight)
-            } else {
-                cell.roundCorners(corners: .bottomLeft)
-            }
-            
+}
+
+extension ViewController: ViewModelDelegate {
+    func dataDidLoad() {
+        layout.sectionsColors = viewModel.units.map { unit in
+            (
+                borderColor: UIColor(hex: unit.config.borderColor) ,
+                shadeColor: UIColor(hex: unit.config.shadeColor)
+            )
         }
+        gameCollectionView.reloadData()
     }
 }
