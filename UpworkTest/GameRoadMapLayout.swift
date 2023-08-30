@@ -14,7 +14,7 @@ class DecorationCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes
 }
 
 class GameRoadMapLayout: UICollectionViewLayout {
-    var cellSize: CGFloat = 80
+    var itemsPerRow: Int = 8
     var sectionsInsets = UIEdgeInsets(top: 0, left: 6, bottom: 0, right: 6)
     var sectionsOffset: CGFloat = 100
     var headerInsets = UIEdgeInsets(top: 0, left: 20, bottom: 20, right: 20)
@@ -25,8 +25,10 @@ class GameRoadMapLayout: UICollectionViewLayout {
     
     private var sectionHeights: [Int: CGFloat] = [:]
     
-    var itemsPerRow: Int {
-        Int(collectionViewContentSize.width/cellSize)
+    var cellSize: CGFloat {
+        let collectionViewBoundsWidth = collectionView?.bounds.width ?? 0
+        let width = collectionViewBoundsWidth - sectionsInsets.left - sectionsInsets.right - sectionBorderWidth
+        return width/CGFloat(itemsPerRow)
     }
     
     override func invalidateLayout() {
