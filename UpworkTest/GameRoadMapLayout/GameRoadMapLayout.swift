@@ -1,18 +1,6 @@
 import Foundation
 import UIKit
 
-class DecorationCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
-    var color: UIColor? = .white
-    var borderWidth: CGFloat = 4
-    
-    override func copy(with zone: NSZone? = nil) -> Any {
-        let copy = super.copy(with: zone) as? DecorationCollectionViewLayoutAttributes
-        copy?.color = self.color
-        copy?.borderWidth = self.borderWidth
-        return copy as Any
-    }
-}
-
 class GameRoadMapLayout: UICollectionViewLayout {
     var itemsPerRow: Int = 8
     var sectionsInsets = UIEdgeInsets(top: 0, left: 6, bottom: 0, right: 6)
@@ -21,7 +9,11 @@ class GameRoadMapLayout: UICollectionViewLayout {
     var headerSize = CGSize(width: 460, height: 50)
     var sectionBorderWidth: CGFloat = 4
     
-    var sectionsColors: [(borderColor: UIColor?, shadeColor: UIColor?)] = []
+    var sectionsColors: [(
+        borderColor: UIColor?,
+        shadeColor: UIColor?,
+        backgroundColor: UIColor?
+    )] = []
     
     private var sectionHeights: [Int: CGFloat] = [:]
     
@@ -76,9 +68,9 @@ class GameRoadMapLayout: UICollectionViewLayout {
     
     override init() {
         super.init()
-        register(RoundedCollectionBackgroundView.self, forDecorationViewOfKind: RoundedCollectionBackgroundView.reuseId)
-        register(RoundedCollectionBorderView.self, forDecorationViewOfKind: RoundedCollectionBorderView.reuseId)
-        register(RoundedCollectionBottomView.self, forDecorationViewOfKind: RoundedCollectionBottomView.reuseId)
+        register(RoundedBackgroundDecorationView.self, forDecorationViewOfKind: RoundedBackgroundDecorationView.reuseId)
+        register(BorderDecorationView.self, forDecorationViewOfKind: BorderDecorationView.reuseId)
+        register(BubbledDecorationView.self, forDecorationViewOfKind: BubbledDecorationView.reuseId)
     }
     
     required init?(coder: NSCoder) {
@@ -115,7 +107,7 @@ class GameRoadMapLayout: UICollectionViewLayout {
             }
             
             if let decorationAtts = layoutAttributesForDecorationView(
-                ofKind: RoundedCollectionBackgroundView.reuseId,
+                ofKind: RoundedBackgroundDecorationView.reuseId,
                 at: IndexPath(item: 0, section: section)
             ) {
                 if rect.intersects(decorationAtts.frame) {
@@ -124,7 +116,7 @@ class GameRoadMapLayout: UICollectionViewLayout {
             }
             
             if let decorationAtts = layoutAttributesForDecorationView(
-                ofKind: RoundedCollectionBorderView.reuseId,
+                ofKind: BorderDecorationView.reuseId,
                 at: IndexPath(item: 0, section: section)
             ) {
                 if rect.intersects(decorationAtts.frame) {
@@ -133,7 +125,7 @@ class GameRoadMapLayout: UICollectionViewLayout {
             }
             
             if let decorationAtts = layoutAttributesForDecorationView(
-                ofKind: RoundedCollectionBottomView.reuseId,
+                ofKind: BubbledDecorationView.reuseId,
                 at: IndexPath(item: 0, section: section)
             ) {
                 if rect.intersects(decorationAtts.frame) {
@@ -191,14 +183,15 @@ class GameRoadMapLayout: UICollectionViewLayout {
         ofKind elementKind: String,
         at indexPath: IndexPath
     ) -> UICollectionViewLayoutAttributes? {
-        var height: CGFloat = 0
-        if let numItems = numberOfItemsInSection(indexPath.section) {
-            var numberOfRows = numItems/itemsPerRow
-            if numItems%itemsPerRow != 0 {
-                numberOfRows += 1
-            }
-            height += CGFloat(numberOfRows) * cellSize
+        
+        let numberOfItems = numberOfItemsInSection(indexPath.section) ?? 0
+        
+        var numberOfRows = numberOfItems/itemsPerRow
+        if numberOfItems%itemsPerRow != 0 {
+            numberOfRows += 1
         }
+        
+        let height = CGFloat(numberOfRows) * cellSize
         
         let width = CGFloat(itemsPerRow)*cellSize
         
@@ -212,13 +205,30 @@ class GameRoadMapLayout: UICollectionViewLayout {
             size: .init(width: width, height: height)
         )
         
-        if elementKind == RoundedCollectionBackgroundView.reuseId {
-            let atts = DecorationCollectionViewLayoutAttributes(
-                forDecorationViewOfKind: RoundedCollectionBackgroundView.reuseId,
+        if elementKind == BubbledDecorationView.reuseId {
+            let atts = BubbledDecorationCollectionViewLayoutAttribute(
+                forDecorationViewOfKind: BubbledDecorationView.reuseId,
                 with: indexPath
             )
             
             atts.zIndex = -1
+            atts.frame = attributesFrame
+            if indexPath.section < sectionsColors.count {
+                atts.color = sectionsColors[indexPath.section].backgroundColor
+                atts.itemsPerRow = itemsPerRow
+                atts.cellSize = cellSize
+                atts.rowsCount = numberOfRows
+            }
+            return atts
+        }
+        
+        if elementKind == RoundedBackgroundDecorationView.reuseId {
+            let atts = BackgroundDecorationCollectionViewLayoutAttribute(
+                forDecorationViewOfKind: RoundedBackgroundDecorationView.reuseId,
+                with: indexPath
+            )
+            
+            atts.zIndex = -2
             atts.frame = attributesFrame
             if indexPath.section < sectionsColors.count {
                 atts.color = sectionsColors[indexPath.section].shadeColor
@@ -226,20 +236,9 @@ class GameRoadMapLayout: UICollectionViewLayout {
             return atts
         }
         
-        if elementKind == RoundedCollectionBottomView.reuseId {
-            let atts = DecorationCollectionViewLayoutAttributes(
-                forDecorationViewOfKind: RoundedCollectionBottomView.reuseId,
-                with: indexPath
-            )
-            
-            atts.zIndex = -2
-            atts.frame = attributesFrame
-            return atts
-        }
-        
-        if elementKind == RoundedCollectionBorderView.reuseId {
-            let atts = DecorationCollectionViewLayoutAttributes(
-                forDecorationViewOfKind: RoundedCollectionBorderView.reuseId,
+        if elementKind == BorderDecorationView.reuseId {
+            let atts = BorderDecorationCollectionViewLayoutAttribute(
+                forDecorationViewOfKind: BorderDecorationView.reuseId,
                 with: indexPath
             )
             
@@ -255,7 +254,7 @@ class GameRoadMapLayout: UICollectionViewLayout {
             }
             return atts
         }
-        
+
         return nil
     }
 

@@ -50,9 +50,9 @@ extension ViewController: UICollectionViewDelegate {
         case "lsn": print("items selected \(model.type)")
         case "book": print("items selected \(model.type)")
         case "video": print("items selected \(model.type)")
-        case "ai": print("items selected \(model.type)")
+        case "convo": print("items selected \(model.type)")
         case "game": print("items selected \(model.type)")
-        case "exercise": print("items selected \(model.type)")
+        case "eset": print("items selected \(model.type)")
         default:
             break
         }
@@ -181,7 +181,8 @@ extension ViewController: ViewModelDelegate {
         layout.sectionsColors = viewModel.units.map { unit in
             (
                 borderColor: UIColor(hex: unit.config.borderColor) ,
-                shadeColor: UIColor(hex: unit.config.shadeColor)
+                shadeColor: UIColor(hex: unit.config.shadeColor),
+                backgroundColor: UIColor(hex: unit.config.backgroundColor)
             )
         }
         gameCollectionView.reloadData()

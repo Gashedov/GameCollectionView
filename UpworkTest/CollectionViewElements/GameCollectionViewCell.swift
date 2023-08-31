@@ -12,7 +12,7 @@ enum LineType {
     case up
 }
 
-class GameCollectionViewCell: BaseCollectionViewCell {
+class GameCollectionViewCell: UICollectionViewCell, ReuseIdentifiable {
     enum CellType {
         case activity(String)
         case filler(String)
@@ -22,6 +22,16 @@ class GameCollectionViewCell: BaseCollectionViewCell {
     
     private let startLineView = UIView()
     private let endLineView = UIView()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupConstraints()
+        setupUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func prepareForReuse() {
         startLineView.removeFromSuperview()
@@ -34,7 +44,7 @@ class GameCollectionViewCell: BaseCollectionViewCell {
         backgroundColor = .clear
     }
     
-    override func setupConstraints() {
+    private func setupConstraints() {
         addSubview(startLineImageView)
         startLineImageView.snp.makeConstraints {
             $0.trailing.top.bottom.equalToSuperview()
@@ -47,7 +57,7 @@ class GameCollectionViewCell: BaseCollectionViewCell {
         }
     }
     
-    override func setupUI() {
+    private func setupUI() {
         backgroundColor = .green
         
         startLineView.backgroundColor = .white

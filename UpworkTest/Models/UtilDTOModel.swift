@@ -15,10 +15,6 @@ struct UnitDTOConfigModel: Decodable {
     let bordercolor: String
     let shadecolor: String
     let randoms: [String]
-    
-    var fillerImageName: String {
-        randoms[Int.random(in: 0..<randoms.count)]
-    }
 }
 
 struct UnitActivityDTOModel: Decodable {
@@ -29,8 +25,4 @@ struct UnitActivityDTOModel: Decodable {
     let stepid: String?
     let order: String?
     let status: String
-    
-    var imageName: String {
-        "\(type)_token_\(status)"
-    }
 }

@@ -1,10 +1,20 @@
 import UIKit
 
-class GameCollectionViewHeader: BaseCollectionReusableView {
+class GameCollectionViewHeader: UICollectionReusableView, ReuseIdentifiable {
     private let titleLabel = UILabel()
     private let containerView = UIView()
     private let frontContainerView = UIView()
     private let badgeImageView = UIImageView()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupConstraints()
+        setupUI()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func configure(
         with text: String
@@ -12,7 +22,7 @@ class GameCollectionViewHeader: BaseCollectionReusableView {
         titleLabel.text = text
     }
     
-    override func setupConstraints() {
+    private func setupConstraints() {
         addSubview(containerView)
         containerView.snp.makeConstraints {
             $0.verticalEdges.equalToSuperview()
@@ -38,7 +48,7 @@ class GameCollectionViewHeader: BaseCollectionReusableView {
         }
     }
     
-    override func setupUI() {
+    private func setupUI() {
         backgroundColor = .clear
         
         containerView.layer.cornerRadius = 10
