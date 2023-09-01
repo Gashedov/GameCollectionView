@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		22E2A62DE0DAAA96C11C0ADD /* Pods_UpworkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C0EA50340C4ABAE4425DA5 /* Pods_UpworkTest.framework */; };
+		275523FA2AA2262B00A0CC86 /* MascotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275523F92AA2262B00A0CC86 /* MascotModel.swift */; };
+		275523FC2AA226B600A0CC86 /* MascotDTOModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275523FB2AA226B600A0CC86 /* MascotDTOModel.swift */; };
 		275F46982A9D2E280047C813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F46972A9D2E280047C813 /* AppDelegate.swift */; };
 		275F469A2A9D2E280047C813 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F46992A9D2E280047C813 /* SceneDelegate.swift */; };
 		275F469C2A9D2E280047C813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F469B2A9D2E280047C813 /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		275523F92AA2262B00A0CC86 /* MascotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotModel.swift; sourceTree = "<group>"; };
+		275523FB2AA226B600A0CC86 /* MascotDTOModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotDTOModel.swift; sourceTree = "<group>"; };
 		275F46942A9D2E280047C813 /* UpworkTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpworkTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		275F46972A9D2E280047C813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		275F46992A9D2E280047C813 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				275F46C02A9E6DB40047C813 /* UtilDTOModel.swift */,
 				275F46C62A9E733D0047C813 /* DataDTOModel.swift */,
 				275F46CA2A9F302E0047C813 /* UnitModel.swift */,
+				275523F92AA2262B00A0CC86 /* MascotModel.swift */,
+				275523FB2AA226B600A0CC86 /* MascotDTOModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 				275F469C2A9D2E280047C813 /* ViewController.swift in Sources */,
 				275F46D82AA0B83B0047C813 /* BubbledDecorationView.swift in Sources */,
 				275F46AE2A9D2FBA0047C813 /* CollectionView+Generics.swift in Sources */,
+				275523FA2AA2262B00A0CC86 /* MascotModel.swift in Sources */,
 				275F46D12AA0B66B0047C813 /* BorderDecorationCollectionViewLayoutAttribure.swift in Sources */,
 				275F46DA2AA0B8540047C813 /* RoundedBackgroundDecorationView.swift in Sources */,
 				275F46B62A9DCF570047C813 /* GameCollectionViewHeader.swift in Sources */,
@@ -320,6 +327,7 @@
 				275F46982A9D2E280047C813 /* AppDelegate.swift in Sources */,
 				275F469A2A9D2E280047C813 /* SceneDelegate.swift in Sources */,
 				275F46B02A9D31A90047C813 /* GameRoadMapLayout.swift in Sources */,
+				275523FC2AA226B600A0CC86 /* MascotDTOModel.swift in Sources */,
 				275F46C72A9E733D0047C813 /* DataDTOModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

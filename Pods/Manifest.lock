@@ -1,20 +1,20 @@
 PODS:
-  - R.swift (7.3.2)
+  - RiveRuntime (5.1.6)
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
-  - R.swift (~> 7)
+  - RiveRuntime
   - SnapKit (~> 5.6)
 
 SPEC REPOS:
   trunk:
-    - R.swift
+    - RiveRuntime
     - SnapKit
 
 SPEC CHECKSUMS:
-  R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
+  RiveRuntime: b019064a8668431b80389f83b5a2eb012e034c01
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: cec384e8b51f39f1d52ab463c1e9f3cad5167854
+PODFILE CHECKSUM: 9e00e6ff476589ed48506a8024666c3f2162f54e
 
 COCOAPODS: 1.11.3

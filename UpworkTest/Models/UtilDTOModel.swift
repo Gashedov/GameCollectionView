@@ -6,7 +6,7 @@ struct UnitDTOModel: Decodable {
     let labelen: String
     let desc: String
     let config: UnitDTOConfigModel
-    let activities: [UnitActivityDTOModel]
+    var activities: [UnitActivityDTOModel]
     let finished: Bool
 }
 
@@ -24,5 +24,5 @@ struct UnitActivityDTOModel: Decodable {
     let type: String
     let stepid: String?
     let order: String?
-    let status: String
+    var status: String
 }

@@ -5,4 +5,5 @@ struct DataResponseDTOModel: Decodable {
 }
 struct DataDTOModel: Decodable {
     let units: [UnitDTOModel]
+    let mascot: MascotDTOModel
 }

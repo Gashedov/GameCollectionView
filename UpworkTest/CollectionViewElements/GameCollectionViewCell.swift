@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+import RiveRuntime
 
 enum LineType {
     case horizantal
@@ -23,6 +24,9 @@ class GameCollectionViewCell: UICollectionViewCell, ReuseIdentifiable {
     private let startLineView = UIView()
     private let endLineView = UIView()
     
+    var animationView: RiveRuntime.RiveView? = nil
+    var animationModel: RiveViewModel? = nil
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupConstraints()
@@ -42,6 +46,11 @@ class GameCollectionViewCell: UICollectionViewCell, ReuseIdentifiable {
         startLineImageView.isHidden = true
         
         backgroundColor = .clear
+        
+        animationView?.snp.removeConstraints()
+        animationView?.removeFromSuperview()
+        animationView = nil
+        animationModel = nil
     }
     
     private func setupConstraints() {
@@ -102,6 +111,35 @@ class GameCollectionViewCell: UICollectionViewCell, ReuseIdentifiable {
         badgeImageView.image = image
         let alpha = Double.random(in: 0.3...0.9)
         backgroundColor = UIColor(hex: primaryColorHEX, alpha: alpha)
+    }
+    
+    func addAnimation(
+        withUrlString urlString: String?,
+        isInBackwardRow: Bool
+    ) {
+        guard let urlString else { return }
+        let model = RiveViewModel(webURL: urlString)
+        let view = model.createRiveView()
+        
+        view.isUserInteractionEnabled = false
+        
+        addSubview(view)
+        
+        view.snp.makeConstraints {
+            if isInBackwardRow {
+                $0.trailing.equalTo(badgeImageView.snp.centerX)
+                $0.leading.equalToSuperview().offset(-20)
+            } else {
+                $0.trailing.equalToSuperview().offset(20)
+                $0.leading.equalTo(badgeImageView.snp.centerX)
+            }
+            
+            $0.top.equalToSuperview().offset(-20)
+            $0.bottom.equalTo(badgeImageView).offset(14)
+        }
+        
+        animationView = view
+        animationModel = model
     }
     
     func configureStartImage(visible: Bool) {

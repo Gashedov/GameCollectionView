@@ -64,15 +64,15 @@ class BubbledDecorationView: UICollectionReusableView, ReuseIdentifiable {
     }
     
     private func generateRandomBubblePath(in rect: CGRect) -> UIBezierPath {
-        let bubbleHeight = CGFloat.random(in: 30...50)
-        let bubbleWidth = CGFloat.random(in: bubbleHeight+10...bubbleHeight+30)
+        let bubbleHeight = CGFloat.random(in: 20...40)
+        let bubbleWidth = CGFloat.random(in: bubbleHeight+10...bubbleHeight+20)
         
         let bubbleX = CGFloat.random(in: rect.origin.x+bubbleWidth...rect.origin.x+rect.width-bubbleWidth)
         let bubbleY = CGFloat.random(in: rect.origin.y+bubbleHeight...rect.origin.y+rect.height-bubbleHeight)
         
         let bubbleRect = CGRect(x: bubbleX, y: bubbleY, width: bubbleWidth, height: bubbleHeight)
         
-        let bubblePath = UIBezierPath(roundedRect: bubbleRect, cornerRadius: 10)
+        let bubblePath = UIBezierPath(roundedRect: bubbleRect, cornerRadius: 6)
         return bubblePath
     }
     

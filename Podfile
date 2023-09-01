@@ -3,6 +3,6 @@ target 'UpworkTest' do
   use_frameworks!
 
   pod 'SnapKit', '~> 5.6'
-  pod 'R.swift', '~> 7'
+  pod 'RiveRuntime'
 
 end

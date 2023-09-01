@@ -2,12 +2,16 @@ import Foundation
 
 class ViewModel {
     var units: [UnitModel] = []
+    var mascot: MascotModel? = nil
     
     weak var delegate: ViewModelDelegate?
     
     func loadData(_ itemsPerRow: Int) {
-        let data = loadJson(filename: "data")  ?? []
-        let units = parseUnits(data)
+        guard let data = loadJson(filename: "data") else { return }
+    
+        self.mascot = MascotModel(animationUrlString: data.mascot.url)
+        let unitsDTOsWithActiveActivity = setupActiveActivity(in: data.units)
+        let units = parseUnits(unitsDTOsWithActiveActivity)
         self.units = fillEmptySpaces(from: units, for: itemsPerRow)
         delegate?.dataDidLoad()
     }
@@ -36,6 +40,27 @@ class ViewModel {
             
             var newUnit = unit
             newUnit.activities = unit.activities + fillers
+            return newUnit
+        }
+    }
+    
+    private func setupActiveActivity(in units: [UnitDTOModel]) -> [UnitDTOModel] {
+        var isPreviousUnitFinished = true
+        return units.map { unit in
+            guard !unit.finished, isPreviousUnitFinished else { return unit }
+            isPreviousUnitFinished = false
+            
+            var isPreviousActivityFinished = true
+            var newUnit = unit
+            newUnit.activities = unit.activities.map { activity in
+                guard isPreviousActivityFinished, activity.status == "inactive" else {
+                    return activity
+                }
+                isPreviousActivityFinished = false
+                var newActivity = activity
+                newActivity.status = "active"
+                return newActivity
+            }
             return newUnit
         }
     }
@@ -84,13 +109,13 @@ class ViewModel {
         )
     }
     
-    private func loadJson(filename fileName: String) -> [UnitDTOModel]? {
+    private func loadJson(filename fileName: String) -> DataDTOModel? {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 let jsonData = try decoder.decode(DataResponseDTOModel.self, from: data)
-                return jsonData.data.units
+                return jsonData.data
             } catch {
                 print("error:\(error)")
             }

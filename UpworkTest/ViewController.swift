@@ -116,6 +116,14 @@ extension ViewController: UICollectionViewDataSource {
             cell.configureStartImage(visible: true)
         }
         
+        if model.status == "active" {
+            let isInBackwardRow = (indexPath.item/layout.itemsPerRow)%2 != 0
+            cell.addAnimation(
+                withUrlString: viewModel.mascot?.animationUrlString,
+                isInBackwardRow: isInBackwardRow
+            )
+        }
+        
         return cell
     }
     

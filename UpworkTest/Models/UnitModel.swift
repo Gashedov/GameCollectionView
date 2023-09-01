@@ -18,6 +18,6 @@ struct UnitActivityModel: Decodable {
     let title: String
     let description: String
     let type: String
-    let status: String
+    var status: String
     let imageName: String
 }
