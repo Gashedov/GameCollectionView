@@ -5,8 +5,8 @@ GameCollectionView
 
 This is a code example of a multi-section CollectionView with a custom CollectionViewLayout created to display items in back-and-forth order.
 
-The elements represent different types of game levels (or learning path).
+* The elements represent different types of game levels (or learning path).
 
-The collection fills the last line with elements with pictures if the number of elements is not a even of the number of elements in the line.
+* The collection fills the last line with elements with pictures if the number of elements is not a even of the number of elements in the line.
 
-Each section has its own design and filler images.
+* Each section has its own design and filler images.
