@@ -10,3 +10,5 @@ This is a code example of a multi-section CollectionView with a custom Collectio
 * The collection fills the last line with elements with pictures if the number of elements is not a even of the number of elements in the line.
 
 * Each section has its own design and filler images.
+
+![ezgif com-video-to-gif-2](https://github.com/Gashedov/GameCollectionView/assets/39625584/453d1836-3bd0-4b14-9099-491302e8da79)
