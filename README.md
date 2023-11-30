@@ -11,4 +11,7 @@ This is a code example of a multi-section CollectionView with a custom Collectio
 
 * Each section has its own design and filler images.
 
-![ezgif com-video-to-gif-2](https://github.com/Gashedov/GameCollectionView/assets/39625584/453d1836-3bd0-4b14-9099-491302e8da79)
+
+
+https://github.com/Gashedov/GameCollectionView/assets/39625584/c0833aa3-29d8-4395-bdb9-266afa99ea18
+
